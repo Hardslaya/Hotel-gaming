@@ -102,6 +102,191 @@ body {
 .u-margin-huge {
   margin-top: 10rem !important; }
 
+@media only screen and (max-width: 75em) {
+  .booking-wrap {
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.5)); } }
+
+.booking {
+  height: 60rem;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; }
+  @media only screen and (max-width: 75em) {
+    .booking {
+      border: 1px solid grey;
+      height: 85rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .booking {
+      height: 95rem; } }
+  .booking__image {
+    height: inherit;
+    width: 40%;
+    background-image: url("../../img/mando2.jpg");
+    background-position: 75%;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    clip-path: ellipse(80% 80% at 2% 50%);
+    position: relative;
+    float: left;
+    opacity: 80%; }
+    @media only screen and (max-width: 75em) {
+      .booking__image {
+        width: 0; } }
+  .booking__form {
+    width: 60%;
+    height: inherit;
+    background-color: transparent;
+    position: relative;
+    float: right;
+    right: 1rem;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-align: right;
+    margin-top: 8rem;
+    padding-right: 2rem; }
+    @media only screen and (max-width: 75em) {
+      .booking__form {
+        position: absolute;
+        padding: 0;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white; } }
+    .booking__form p {
+      background-image: linear-gradient(to right, #f9376b 20%, orange);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 2.5rem;
+      text-align: left; }
+      @media only screen and (max-width: 75em) {
+        .booking__form p {
+          position: relative;
+          text-align: center;
+          left: 50%;
+          transform: translate(-50%, 0);
+          font-size: 4rem;
+          font-weight: 900;
+          margin-bottom: 2.5rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .booking__form p {
+          font-size: 3.5rem;
+          margin-bottom: 5rem;
+          font-weight: 900; } }
+    .booking__form-group {
+      padding-right: 55%;
+      position: relative;
+      text-align: right;
+      left: 50%;
+      transform: translate(-50%, 0); }
+      @media only screen and (max-width: 75em) {
+        .booking__form-group {
+          font-size: 3.5rem;
+          padding-right: 25%;
+          margin-bottom: 2rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .booking__form-group {
+          padding-right: 15%;
+          font-size: 3rem;
+          margin-bottom: 5rem; } }
+      .booking__form-group__input {
+        border-bottom: 5px solid transparent; }
+        @media only screen and (max-width: 56.25em) {
+          .booking__form-group__input {
+            font-size: 3rem; } }
+        .booking__form-group__input:focus {
+          outline: none;
+          border-bottom: 5px solid orange;
+          box-shadow: rgba(176, 48, 176, 0.56) 0px 22px 70px 4px; }
+      .booking__form-group--radio {
+        padding-left: 10%;
+        text-align: left; }
+        .booking__form-group--radio__input {
+          display: none; }
+        .booking__form-group--radio__label {
+          cursor: pointer; }
+        .booking__form-group--radio__button {
+          height: 3rem;
+          width: 3rem;
+          border-radius: 5px;
+          background-image: url(../../img/check.png);
+          background-position-y: center;
+          background-size: cover;
+          display: inline-block;
+          left: 0;
+          top: -0.4rem; }
+          .booking__form-group--radio__button::after {
+            content: "";
+            background-position-y: center;
+            background-size: cover;
+            display: block;
+            height: 3rem;
+            width: 3rem;
+            background-image: url(../../img/checked.png);
+            opacity: 0;
+            transition: opacity 0.2s; }
+        .booking__form-group--radio__input:checked ~ .booking__form-group--radio__label .booking__form-group--radio__button::after {
+          opacity: 1; }
+        @media only screen and (max-width: 75em) {
+          .booking__form-group--radio {
+            padding-left: 45%;
+            position: relative;
+            text-align: left;
+            left: 50%;
+            transform: translate(-50%, 0); } }
+        @media only screen and (max-width: 56.25em) {
+          .booking__form-group--radio {
+            font-size: 3rem; } }
+    .booking__form__input--submit {
+      /* position: relative;
+                top: 3rem;
+                width: 10%;
+                min-width: fit-content;
+                
+                background: transparent;
+                border: 3px solid $color-purple-light;
+                padding: 1rem;
+                border-radius: 10%;
+                color: white;
+                font-size: 2rem;*/
+      position: absolute;
+      left: 10rem;
+      --full: linear-gradient(red 0 0);
+      margin: 1rem auto;
+      border: solid .25em transparent;
+      padding: 1rem 1.5rem;
+      border-radius: 9rem;
+      background: linear-gradient(to right bottom, orange, #f9376b) border-box;
+      text-transform: uppercase; }
+      @supports (-webkit-mask-clip: text) {
+        .booking__form__input--submit {
+          -webkit-text-fill-color: transparent;
+          -webkit-mask: var(--full) text, var(--full) padding-box, var(--full);
+          -webkit-mask-composite: xor; } }
+      .booking__form__input--submit:hover {
+        cursor: pointer;
+        transform: translateY(-2px); }
+      @media only screen and (max-width: 75em) {
+        .booking__form__input--submit {
+          width: fit-content;
+          padding-left: 40%;
+          position: absolute;
+          width: fit-content;
+          left: 50%;
+          transform: translate(-50%, 0);
+          padding: 1rem 1.5rem;
+          font-size: 2rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .booking__form__input--submit {
+          font-size: 3rem;
+          right: 50%; } }
+
 .btn, .btn:link, .btn:visited {
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -331,6 +516,141 @@ body {
   .room-box__button {
     text-align: center;
     padding-bottom: 3rem; }
+
+.tournament-ad {
+  margin-top: 40%;
+  margin-bottom: 20%;
+  height: 60%;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  transition: transform .5s; }
+  @media only screen and (max-width: 75em) {
+    .tournament-ad {
+      height: 60rem;
+      margin: 2rem auto; } }
+  .tournament-ad__image {
+    height: 35rem;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: -10; }
+    @media only screen and (max-width: 75em) {
+      .tournament-ad__image {
+        height: 60rem; } }
+  .tournament-ad__1 {
+    background-image: url("../../img/lol.jpg");
+    background-size: cover;
+    background-position: 50% 50%; }
+  .tournament-ad__2 {
+    background-image: url("../../img/fortnite.png");
+    background-size: cover;
+    background-position: 50% 50%; }
+  .tournament-ad__3 {
+    background-image: url("../../img/apex.jpg");
+    background-size: cover;
+    background-position: 50% 50%; }
+  .tournament-ad__4 {
+    background-image: url("../../img/hearthstone.jpg");
+    background-size: cover;
+    background-position: 50% 50%; }
+  .tournament-ad__info {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 35rem;
+    background-color: transparent;
+    color: transparent;
+    z-index: -20;
+    transition: background-color 1s; }
+    @media only screen and (max-width: 75em) {
+      .tournament-ad__info {
+        height: 60rem;
+        visibility: visible;
+        color: white;
+        background: linear-gradient(120deg, rgba(206, 202, 202, 0.8) 50%, transparent);
+        opacity: 100%;
+        font-size: medium;
+        z-index: 50; } }
+    .tournament-ad__info--heading-tertiary {
+      margin: 0 0 auto auto;
+      padding: 1rem;
+      width: fit-content;
+      letter-spacing: 0.1rem;
+      min-width: 90%;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1.9rem;
+      background: linear-gradient(to right, #602080, #b030b0);
+      color: white;
+      opacity: 100%; }
+      @media only screen and (max-width: 75em) {
+        .tournament-ad__info--heading-tertiary {
+          padding: 1rem;
+          font-size: 3.5rem;
+          opacity: 80%; } }
+      @media only screen and (max-width: 56.25em) {
+        .tournament-ad__info--heading-tertiary {
+          padding: 3rem;
+          font-size: 3rem; } }
+    .tournament-ad__info--text {
+      text-align: center;
+      padding: 3rem;
+      font-size: 3.5rem;
+      color: black; }
+    .tournament-ad__info--button {
+      width: fit-content;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border-radius: 2rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.2rem;
+      font-weight: 900;
+      background: linear-gradient(to left, #b030b0, #602080);
+      color: white; }
+      .tournament-ad__info--button:hover {
+        transform: translate(-50%, -2px);
+        background: linear-gradient(to left, #b030b0, #602080);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; }
+      @media only screen and (max-width: 75em) {
+        .tournament-ad__info--button {
+          font-size: 3.5rem;
+          padding: 1rem 3rem;
+          opacity: 90%;
+          margin-top: 2rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .tournament-ad__info--button {
+          font-size: 3rem;
+          margin-top: 0; } }
+  .tournament-ad__info hr {
+    width: 50%;
+    margin: 0 auto; }
+  .tournament-ad:hover {
+    box-shadow: rgba(176, 48, 176, 0.56) 0px 22px 70px 4px;
+    transform: translateY(-1rem); }
+  .tournament-ad:hover .tournament-ad__image {
+    filter: blur(8px); }
+  .tournament-ad:hover .tournament-ad__info {
+    visibility: visible;
+    color: black;
+    background-color: white;
+    opacity: 70%;
+    font-size: medium;
+    z-index: 50; }
+    .tournament-ad:hover .tournament-ad__info--text {
+      text-align: center;
+      letter-spacing: 0.2rem;
+      font-size: 2rem;
+      padding: 2rem;
+      color: black; }
 
 .footer {
   background-color: #000;
