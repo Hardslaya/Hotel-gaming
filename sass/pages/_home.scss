@@ -14,8 +14,6 @@
     clip-path: polygon(0 0, 50% 5%,100% 0, 100% 100%, 0 100%);
     padding-top: 2rem;
 
-    //box-shadow: rgba($color-purple-light, 0.56) 100px 22px 70px 4px;
-
     @include respond(tab-land) {
         padding: 10rem 0;
         height: fit-content;
@@ -23,6 +21,7 @@
     }
 
     @include respond(tab-port) {
+        padding: 4rem 0;
         clip-path: polygon(0 0, 50% 1%,100% 0, 100% 100%, 50% 101%, 0 100%);
     }
 
