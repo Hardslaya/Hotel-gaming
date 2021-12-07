@@ -3,7 +3,7 @@
     margin-bottom: 20%;
     height: 60%;
     border-radius: 5px;
-    overflow: hidden; //needed to get the round corners
+    overflow: hidden; 
     z-index: 0;
     position: relative;
     transition: transform .5s;
@@ -16,7 +16,7 @@
     &__image{
         height: 35rem;
         border-radius: 5px;
-        overflow: hidden; //needed to get the round corners
+        overflow: hidden;
         z-index: -10;
 
         @include respond(tab-land) {
@@ -146,7 +146,6 @@
     }
 
     &:hover{
-        box-shadow: rgba($color-purple-light, 0.56) 0px 22px 70px 4px;
         transform: translateY(-1rem);
     }
 

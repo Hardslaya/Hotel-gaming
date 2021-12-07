@@ -8,7 +8,7 @@
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s;
+    transition: all 0.3s;    
 
     &:target {
         opacity: 1;
@@ -45,7 +45,10 @@
         display: table;
         overflow: hidden;
         transform: translate(-50%, -50%);
-        transition: all 0.5s 0.2s;        
+        transition: all 0.5s 0.2s;   
+        @include respond(tab-port){
+
+        }     
     }
     &__left {
         width: 40%;
@@ -89,6 +92,7 @@
         @include respond(tab-port) {
             column-count: 1;
             column-gap: 2rem;
+            font-size: 1rem;
         }
     }
 }

@@ -10,11 +10,11 @@
 .section-tournaments{
     font-family: Play;
     height: 60rem;
-    padding: 5rem 0;
-    //background: linear-gradient(to right,$color-purple-dark 5%, rgb(92, 91, 91) 20%, black);
-    background-color: rgb(92, 91, 91);
-    clip-path: polygon(0 0, 50% 5%,100% 0, 100% 100%, 50% 105%, 0 100%);
-    box-shadow: rgba($color-purple-light, 0.56) 100px 22px 70px 4px;
+    background-color: $color-white;
+    clip-path: polygon(0 0, 50% 5%,100% 0, 100% 100%, 0 100%);
+    padding-top: 2rem;
+
+    //box-shadow: rgba($color-purple-light, 0.56) 100px 22px 70px 4px;
 
     @include respond(tab-land) {
         padding: 10rem 0;
@@ -29,6 +29,7 @@
 }
 
 .section-booking{
+    margin-top: 5rem;
     font-family: Play;
     width: 60%;
     margin: 0 auto;
