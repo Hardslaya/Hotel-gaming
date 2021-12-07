@@ -1,0 +1,174 @@
+.tournament-ad{
+    margin-top: 40%;
+    margin-bottom: 20%;
+    height: 60%;
+    border-radius: 5px;
+    overflow: hidden; //needed to get the round corners
+    z-index: 0;
+    position: relative;
+    transition: transform .5s;
+
+    @include respond(tab-land) {
+        height: 60rem;
+        margin: 2rem auto;
+    }
+
+    &__image{
+        height: 35rem;
+        border-radius: 5px;
+        overflow: hidden; //needed to get the round corners
+        z-index: -10;
+
+        @include respond(tab-land) {
+            height: 60rem;
+        }
+    }
+
+    &__1{
+        background-image: url("../../img/lol.jpg");
+        background-size: cover;
+        background-position: 50% 50%;
+
+    }
+
+    &__2{
+        background-image: url("../../img/fortnite.png");
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    &__3{
+        background-image: url("../../img/apex.jpg");
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    &__4{
+        background-image: url("../../img/hearthstone.jpg");
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    &__info{
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 35rem;
+        background-color: transparent;
+        color: transparent;
+        z-index: -20;        
+        transition: background-color 1s;
+
+        @include respond(tab-land) {
+            height: 60rem;
+            visibility: visible;
+            color: white;
+            background: linear-gradient(120deg, rgba(206, 202, 202, 0.8) 50%, transparent);
+            opacity: 100%;
+            font-size: medium;
+            z-index: 50;
+        }
+
+        &--heading-tertiary{
+            margin: 0 0 auto auto;
+            padding: 1rem;
+            width: fit-content;
+            letter-spacing: 0.1rem;
+            min-width: 90%;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.9rem;
+            background: linear-gradient(to right, $color-purple-dark, $color-purple-light);
+            color: white;
+            opacity: 100%;
+
+            @include respond(tab-land){
+                padding: 1rem;
+                font-size: 3.5rem;
+                opacity: 80%;
+            }
+
+            @include respond(tab-port) {
+                padding: 3rem;
+                font-size: 3rem;
+            } 
+        }
+
+        &--text{
+            text-align: center;
+            padding: 3rem;
+            font-size: 3.5rem;
+            color: black;
+        }
+
+        &--button{
+            width: fit-content;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-radius: 2rem;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.2rem;
+            font-weight: 900;
+            background: linear-gradient(to left, $color-purple-light, $color-purple-dark);
+            color: white;
+
+            &:hover{
+                transform: translate(-50%, -2px);
+                background: linear-gradient(to left, $color-purple-light, $color-purple-dark);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
+
+            @include respond(tab-land) {
+                font-size: 3.5rem;
+                padding: 1rem 3rem;
+                opacity: 90%;
+                margin-top: 2rem;
+            }
+
+            @include respond(tab-port) {
+                font-size: 3rem;
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__info hr{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    &:hover{
+        box-shadow: rgba($color-purple-light, 0.56) 0px 22px 70px 4px;
+        transform: translateY(-1rem);
+    }
+
+    &:hover &__image{
+        filter: blur(8px);
+    }
+
+
+    &:hover &__info{
+        visibility: visible;
+        color: black;
+        background-color: white;
+        opacity: 70%;
+        font-size: medium;
+        z-index: 50;     
+
+        &--text{
+            text-align: center;
+            letter-spacing: 0.2rem;
+            font-size: 2rem;
+            padding: 2rem;
+            color: black;
+        }  
+    }
+}
