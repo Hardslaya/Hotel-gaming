@@ -9,6 +9,13 @@
         }
     }
 
+    &.section-tournaments{
+        @include respond(tab-land) {
+            max-width: 100rem;
+            padding: 0 3rem;
+        }
+    }
+
     @include respond(tab-port) {
         max-width: 50rem;
         padding: 0 3rem;
@@ -27,6 +34,17 @@
             margin-bottom: $gutter-vertical-small;
         }        
      }
+     &.section-tournaments{
+        @include respond(tab-land) {
+
+            &:nth-child(even){
+                margin-right: 0 !important;
+            }
+    
+            width: 46.5% !important;
+        }
+    }
+
 
      @include respond(tab-port) {
         width: 100% !important;
