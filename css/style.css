@@ -102,10 +102,6 @@ body {
 .u-margin-huge {
   margin-top: 10rem !important; }
 
-@media only screen and (max-width: 75em) {
-  .booking-wrap {
-    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.5)); } }
-
 .booking {
   height: 60rem;
   width: 100%;
@@ -244,17 +240,6 @@ body {
           .booking__form-group--radio {
             font-size: 3rem; } }
     .booking__form__input--submit {
-      /* position: relative;
-                top: 3rem;
-                width: 10%;
-                min-width: fit-content;
-                
-                background: transparent;
-                border: 3px solid $color-purple-light;
-                padding: 1rem;
-                border-radius: 10%;
-                color: white;
-                font-size: 2rem;*/
       position: absolute;
       left: 10rem;
       --full: linear-gradient(red 0 0);
@@ -752,6 +737,9 @@ body {
         width: 46.5% !important; }
         .row [class^="col-"].section-tournaments:nth-child(even) {
           margin-right: 0 !important; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"].section-tournaments {
+        width: 100% !important; } }
     @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
