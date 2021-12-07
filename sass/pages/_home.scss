@@ -1,0 +1,137 @@
+.events {
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    transition: all .2s;
+    border-radius: 5rem;    
+    
+    &--hover{
+        position: absolute;
+        margin: 0 auto;
+        width: $default-width;
+        height: $default-height;
+
+        @include respond(tab-land) {
+            width: 140%;
+            height: 150%;
+            transform: translateX(-15%);
+        }
+        @include respond(tab-port) {
+            width: 75%;
+            height: 90%;
+            transform: translateX(-1%);
+        }
+        @include respond(phone) {
+            width: 40%;
+            height: 50%;
+            transform: translateX(3%);
+        }
+        
+        background-image: linear-gradient(360deg,
+        rgba($white, 0.7),
+        rgba($events-blue, 0.7)),
+        url('../img/levelup.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        transition: all .2s;
+        border-radius: 5rem;
+        z-index: 1;
+        
+        &:hover{
+            .events__btn-box{
+                opacity: 0;
+            }
+            animation: closingRectangle 3s ease-in-out;
+        } 
+    }
+
+    &__content {
+        opacity: 0;
+        overflow: hidden;
+        height: 0;
+        transition: all 1s;
+        position: relative;
+        margin: 0 auto;
+        transform: translate(-60vh, 20rem);
+
+        @include respond(tab-land) {
+            transform: translateY(-20%, 20%);
+        }
+        @include respond(tab-port) {
+            transform: translate(-43%, 20%);
+        }
+        @include respond(phone) {
+            transform: translate(-40%, 15%);
+        }
+
+        &--gaming{
+            @include events-content-basic;
+            background-image: linear-gradient(to right,
+            rgba($white, 0.9),
+            rgba($white, 0.2),
+            rgba($white, 0.2),
+            rgba($white, 0.9)),
+            url('../img/gaming.jpg');
+        }
+
+        &--celebrations{
+            @include events-content-basic;
+            background-image: linear-gradient(to right,
+            rgba($white, 0.9),
+            rgba($white, 0.2),
+            rgba($white, 0.2),
+            rgba($white, 0.9)),
+            url('../img/celebrations.jpg');
+        }
+
+        &--wedding{
+            @include events-content-basic;
+            background-image: linear-gradient(to right,
+            rgba($white, 0.9),
+            rgba($white, 0.2),
+            rgba($white, 0.2),
+            rgba($white, 0.9)),
+            url('../img/wedding.jpg');
+        }
+
+        &--meetings{
+            @include events-content-basic;
+            background-image: linear-gradient(to right,
+            rgba($white, 0.9),
+            rgba($white, 0.2),
+            rgba($white, 0.2),
+            rgba($white, 0.9)),
+            url('../img/meetings.jpg');
+        }
+
+        &--headings-bg {
+            width: 30vh;
+            height: 3vh;
+            background-color: rgba($black, 0.3);
+
+            @include respond(tab-land) {
+                width: 35%;
+            }
+            @include respond(tab-port) {
+                width: 58%;
+            }
+            @include respond(phone) {
+                width: 72%;
+            }
+        }
+
+        &--text {
+            @font-face {
+                font-family: "Bellerose";
+                src: "fonts/Bellerose.ttf";
+            }
+            font-family: "Bellerose";
+            font-size: 1.2rem;
+            text-align: left;
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+    }
+}

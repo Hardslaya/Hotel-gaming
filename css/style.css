@@ -1,0 +1,316 @@
+@keyframes closingRectangle2 {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+  50% {
+    clip-path: polygon(35% 0, 65% 0, 65% 100%, 35% 100%); }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } }
+
+@keyframes closingRectangle {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+  50% {
+    clip-path: polygon(15% 30%, 90% 20%, 90% 65%, 15% 60%); }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } }
+
+@keyframes appearing {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes disappearing {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-weight: 400;
+  line-height: 1.7;
+  font-family: Century Gothic, sans-serif; }
+
+.events__heading {
+  position: absolute;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgba(223, 37, 198, 0.9), white);
+  -webkit-background-clip: text;
+  color: transparent;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  transform: translate(-9.5rem, -2rem);
+  font-size: 1.4rem;
+  letter-spacing: 1.2rem;
+  transition: all .2s; }
+  @media only screen and (max-width: 75em) {
+    .events__heading {
+      font-size: 1.5rem;
+      transform: translate(-8.7rem, -2rem); } }
+  @media only screen and (max-width: 56.25em) {
+    .events__heading {
+      font-size: 1.2rem;
+      transform: translate(-7.6rem, -2rem); } }
+  @media only screen and (max-width: 37.5em) {
+    .events__heading {
+      font-size: 1.2rem;
+      transform: translate(-7.5rem, -2rem); } }
+  .events__heading--notChecked {
+    opacity: 1; }
+
+.events__content--headings {
+  position: absolute;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgba(223, 37, 198, 0.9), #07a3be);
+  -webkit-background-clip: text;
+  color: transparent;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  transform: translateX(-64vh);
+  font-size: 1.4rem;
+  letter-spacing: 1.2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .events__content--headings {
+      transform: translateX(-85%); } }
+  @media only screen and (max-width: 37.5em) {
+    .events__content--headings {
+      transform: translateX(-67%); } }
+
+.events__btn-box {
+  position: relative;
+  margin: 0 auto;
+  width: 100vh;
+  height: 50vh; }
+  .events__btn-box--btn {
+    z-index: 2;
+    position: relative;
+    margin: 0 auto;
+    width: 7em;
+    height: 7em;
+    top: 68%; }
+    @media only screen and (max-width: 75em) {
+      .events__btn-box--btn {
+        top: 105%; } }
+    @media only screen and (max-width: 56.25em) {
+      .events__btn-box--btn {
+        top: 55%;
+        left: -12%; } }
+    @media only screen and (max-width: 37.5em) {
+      .events__btn-box--btn {
+        top: 48%;
+        left: -23%; } }
+    .events__btn-box--btn input[type=checkbox] + label {
+      display: block;
+      margin: 0.3em;
+      cursor: pointer;
+      padding: 0.3em; }
+    .events__btn-box--btn input[type=checkbox] {
+      display: none; }
+    .events__btn-box--btn input[type=checkbox] + label:before {
+      content: "";
+      background-color: #fd4e4e;
+      border: 0.2em solid #ff6c6c;
+      border-radius: 50em;
+      display: inline-block;
+      width: 6em;
+      height: 6em;
+      padding-left: 0.2em;
+      padding-bottom: 0.3em;
+      margin-right: 0.2em;
+      vertical-align: bottom;
+      color: transparent;
+      transition: .3s; }
+    .events__btn-box--btn input[type=checkbox] + label:active:before {
+      transform: scale(0); }
+    .events__btn-box--btn input[type=checkbox]:checked + label:before {
+      background-color: rgba(189, 255, 102, 0.521);
+      border-color: rgba(189, 255, 102, 0.521);
+      color: #fff; }
+  .events__btn-box--content {
+    display: inline-block;
+    background-image: linear-gradient(to right left, #df25c6, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; }
+  .events__btn-box--showcontent:checked ~ .events__content {
+    animation: appearing 1s ease-in;
+    opacity: 1;
+    height: 100vh;
+    width: 130vh; }
+    @media only screen and (max-width: 75em) {
+      .events__btn-box--showcontent:checked ~ .events__content {
+        width: 2000%;
+        height: 1000%; } }
+    @media only screen and (max-width: 56.25em) {
+      .events__btn-box--showcontent:checked ~ .events__content {
+        width: 630%;
+        height: 1000%; } }
+    @media only screen and (max-width: 37.5em) {
+      .events__btn-box--showcontent:checked ~ .events__content {
+        width: 500%;
+        height: 800%; } }
+  .events__btn-box--showcontent:checked ~ .events__heading > .events__heading--notChecked {
+    display: none; }
+  .events__btn-box--showcontent:not(:checked) ~ .events__content {
+    animation: disappearing 1s ease-out;
+    opacity: 0;
+    height: 0;
+    width: 0; }
+
+.events {
+  position: relative;
+  margin: 0 auto;
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  transition: all .2s;
+  border-radius: 5rem; }
+  .events--hover {
+    position: absolute;
+    margin: 0 auto;
+    width: 100vh;
+    height: 50vh;
+    background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.7), rgba(7, 163, 190, 0.7)), url("../img/levelup.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+    border-radius: 5rem;
+    z-index: 1; }
+    @media only screen and (max-width: 75em) {
+      .events--hover {
+        width: 140%;
+        height: 150%;
+        transform: translateX(-15%); } }
+    @media only screen and (max-width: 56.25em) {
+      .events--hover {
+        width: 75%;
+        height: 90%;
+        transform: translateX(-1%); } }
+    @media only screen and (max-width: 37.5em) {
+      .events--hover {
+        width: 40%;
+        height: 50%;
+        transform: translateX(3%); } }
+    .events--hover:hover {
+      animation: closingRectangle 3s ease-in-out; }
+      .events--hover:hover .events__btn-box {
+        opacity: 0; }
+  .events__content {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    transition: all 1s;
+    position: relative;
+    margin: 0 auto;
+    transform: translate(-60vh, 20rem); }
+    @media only screen and (max-width: 75em) {
+      .events__content {
+        transform: translateY(-20%, 20%); } }
+    @media only screen and (max-width: 56.25em) {
+      .events__content {
+        transform: translate(-43%, 20%); } }
+    @media only screen and (max-width: 37.5em) {
+      .events__content {
+        transform: translate(-40%, 15%); } }
+    .events__content--gaming {
+      margin-bottom: -1.5rem;
+      width: 130vh;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/gaming.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .events__content--gaming {
+          width: 100%;
+          height: 0%; } }
+      @media only screen and (max-width: 37.5em) {
+        .events__content--gaming {
+          width: 100%;
+          height: 50%; } }
+    .events__content--celebrations {
+      margin-bottom: -1.5rem;
+      width: 130vh;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/celebrations.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .events__content--celebrations {
+          width: 100%;
+          height: 0%; } }
+      @media only screen and (max-width: 37.5em) {
+        .events__content--celebrations {
+          width: 100%;
+          height: 50%; } }
+    .events__content--wedding {
+      margin-bottom: -1.5rem;
+      width: 130vh;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/wedding.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .events__content--wedding {
+          width: 100%;
+          height: 0%; } }
+      @media only screen and (max-width: 37.5em) {
+        .events__content--wedding {
+          width: 100%;
+          height: 50%; } }
+    .events__content--meetings {
+      margin-bottom: -1.5rem;
+      width: 130vh;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/meetings.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .events__content--meetings {
+          width: 100%;
+          height: 0%; } }
+      @media only screen and (max-width: 37.5em) {
+        .events__content--meetings {
+          width: 100%;
+          height: 50%; } }
+    .events__content--headings-bg {
+      width: 30vh;
+      height: 3vh;
+      background-color: rgba(0, 0, 0, 0.3); }
+      @media only screen and (max-width: 75em) {
+        .events__content--headings-bg {
+          width: 35%; } }
+      @media only screen and (max-width: 56.25em) {
+        .events__content--headings-bg {
+          width: 58%; } }
+      @media only screen and (max-width: 37.5em) {
+        .events__content--headings-bg {
+          width: 72%; } }
+    .events__content--text {
+      font-family: "Bellerose";
+      font-size: 1.2rem;
+      text-align: left;
+      margin-left: 1.5rem;
+      margin-top: 0.5rem; }
+
+@font-face {
+  .events__content--text {
+    font-family: "Bellerose";
+    src: "fonts/Bellerose.ttf"; } }
