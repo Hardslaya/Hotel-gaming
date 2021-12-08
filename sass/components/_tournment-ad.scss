@@ -101,6 +101,10 @@
             padding: 3rem;
             font-size: 3.5rem;
             color: black;
+
+            @include respond(tab-land){
+                letter-spacing: 0.2rem;
+            }  
         }
 
         &--button{
@@ -160,7 +164,11 @@
         background-color: white;
         opacity: 70%;
         font-size: medium;
-        z-index: 50;     
+        z-index: 50;  
+        
+        @include respond(tab-land) {
+            opacity: 90%;
+        }
 
         &--text{
             text-align: center;
@@ -168,6 +176,11 @@
             font-size: 2rem;
             padding: 2rem;
             color: black;
+
+            @include respond(tab-land) {
+                padding: 3rem;
+                font-size: 3.5rem;
+            }
         }  
     }
 }
