@@ -16,6 +16,10 @@
     transition: all .2s;
     border-radius: 5rem;
 
+    @include respond(tab-port){
+        height: 190vh;
+    }
+
     &--hover{
         position: absolute;
         margin: 0 auto;
@@ -61,7 +65,7 @@
             transform: translate(-43%, 20%);
         }
         @include respond(phone) {
-            transform: translate(-40%, 15%);
+            transform: translate(-40%, 50%);
         }
 
         &--gaming{

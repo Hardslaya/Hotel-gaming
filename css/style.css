@@ -427,11 +427,11 @@ body {
         top: 70%; } }
     @media only screen and (max-width: 56.25em) {
       .btn-events--btn {
-        top: 70%; } }
+        top: 60%; } }
     @media only screen and (max-width: 37.5em) {
       .btn-events--btn {
-        top: 48%;
-        left: -23%; } }
+        top: 120%;
+        left: -30%; } }
     .btn-events--btn input[type=checkbox] + label {
       display: block;
       margin: 0.3em;
@@ -932,6 +932,9 @@ body {
   text-align: center;
   transition: all .2s;
   border-radius: 5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .section-events {
+      height: 190vh; } }
   .section-events--hover {
     position: absolute;
     margin: 0 auto;
@@ -968,7 +971,7 @@ body {
         transform: translate(-43%, 20%); } }
     @media only screen and (max-width: 37.5em) {
       .section-events .events__content {
-        transform: translate(-40%, 15%); } }
+        transform: translate(-40%, 50%); } }
     .section-events .events__content--gaming {
       margin-bottom: -1.5rem;
       width: 130vh;
@@ -1048,7 +1051,7 @@ body {
           width: 72%; } }
 
 .section-tournaments {
-  font-family: Play;
+  font-family: Lato;
   height: 60rem;
   background-color: #fff;
   clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0 100%);
@@ -1065,7 +1068,7 @@ body {
 
 .section-booking {
   margin-top: 5rem;
-  font-family: Play;
+  font-family: Lato;
   width: 60%;
   margin: 0 auto;
   background-color: #5c5b5b;
