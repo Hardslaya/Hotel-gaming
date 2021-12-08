@@ -173,26 +173,24 @@
             &--submit{
                 position: absolute;
                 left: 10rem;
-                --full: linear-gradient(red 0 0);
 
                 margin: 1rem auto;
                 border: solid .25em transparent;
                 padding: 1rem 1.5rem;
                 border-radius: 9rem;
-                background: 
-                    linear-gradient(to right bottom, orange, #f9376b) 
-                        border-box;
-                text-transform: uppercase;
 
-                @supports (-webkit-mask-clip: text) {
-                    -webkit-text-fill-color: transparent;
-                    -webkit-mask: var(--full) text, var(--full) padding-box, var(--full);
-                    -webkit-mask-composite: xor;
-                }
+                background-image: linear-gradient(to right bottom, orange, #f9376b);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                border: 2px solid orange;
+                
+                font-weight: 900;       
+                text-transform: uppercase;
 
                 &:hover{
                     cursor: pointer;
-                    transform: translateY(-2px);  
+                    transform: translateY(-2px);
                     
                     @include respond(tab-land){
                         transform: translate(-50%,-2px);
@@ -207,11 +205,10 @@
                     left: 50%;
                     transform: translate(-50%, 0);
                     padding: 1rem 1.5rem;
-                    font-size: 2rem;
+                    font-size: 3rem;
                 }
 
                 @include respond(tab-port){
-                    font-size: 3rem;
                     right: 50%;
                 }
             }
