@@ -23,11 +23,8 @@
         background-image: url("../../img/mando2.jpg");
         background-position: 75%;
         background-size: cover;
-        left: 0;
-        top: 0;
         clip-path: ellipse(80% 80% at 2% 50%);
         position: absolute;
-        float: left;
         opacity: 80%;
 
         @include respond(tab-land){
