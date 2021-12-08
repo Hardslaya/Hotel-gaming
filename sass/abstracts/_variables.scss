@@ -3,6 +3,7 @@ $color-purple-dark: #602080;
 $color-purple-light: #b030b0;
 
 $color-yellow: #f6fa00;
+$color-red: red;
 
 $color-grey-light: #eee;
 $color-grey-dark: #777;
@@ -22,6 +23,14 @@ $color-3-dark: #187000;
 $color-4-light: #C50000;
 $color-4-dark: #870000;
 
+//Events Colours
+$upgrade-pink: rgb(223, 37, 198);
+
+$events-blue: rgb(7, 163, 190);
+$events-btn-checked: rgba(189, 255, 102, 0.521);
+$events-btn-notChecked: rgb(253, 78, 78);
+$events-btn-lightNotChecked: rgb(255, 108, 108);
+
 //Font
 $default-font-size: 1.6rem;
 
@@ -31,3 +40,8 @@ $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
+
+$events-width: 100vh;
+$events-height: 50vh;
+
+$add-height: false;

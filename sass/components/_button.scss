@@ -81,3 +81,112 @@
         transition: all .4s;
     }
 }
+
+.btn-events {
+    position: relative;
+    margin: 0 auto;
+    width: $events-width;
+    height: $events-height;
+    
+    &--btn {
+        z-index: 2;
+        position: relative;
+        margin: 0 auto;
+        width: 7em;
+        height: 7em;
+        top: 68%;
+
+        @include respond(tab-land) {
+            top: 70%;
+        }
+        @include respond(tab-port) {
+            top: 70%;
+        }
+        @include respond(phone) {
+            top: 48%;
+            left: -23%;
+        }
+
+
+        input[type=checkbox] + label {
+            display: block;
+            margin: 0.3em;
+            cursor: pointer;
+            padding: 0.3em;
+        }
+          
+        input[type=checkbox] {
+            display: none;
+        }
+          
+        input[type=checkbox] + label:before {
+            content: "";
+            background-color: $events-btn-notChecked;
+            border: 0.2em solid $events-btn-lightNotChecked;
+            border-radius: 50em;
+            display: inline-block;
+            width: 6em;
+            height: 6em;
+            padding-left: 0.2em;
+            padding-bottom: 0.3em;
+            margin-right: 0.2em;
+            vertical-align: bottom;
+            color: transparent;
+            transition: .3s;
+        }
+          
+        input[type=checkbox] + label:active:before {
+            transform: scale(0);
+        }
+          
+        input[type=checkbox]:checked + label:before {
+            background-color: $events-btn-checked;
+            border-color: $events-btn-checked;
+            color: $color-white;
+        }
+    }
+
+    &--content {
+        display: inline-block;
+        background-image: linear-gradient(to right left,
+        rgba($upgrade-pink, 1),
+        rgba($color-white, 1),
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    &--showcontent:checked {        
+        & ~ .events__content {
+            animation: appearing 1s ease-in;
+            opacity: 1;
+            height: 100vh;
+            width: 130vh;
+
+            @include respond(tab-land) {
+                width: 2000%;
+                height: 1000%;
+            }
+            @include respond(tab-port) {
+                width: 630%;
+                height: 1000%;
+            }
+            @include respond(phone) {
+                width: 500%;
+                height: 800%;
+            }
+        }
+
+        & ~ .events__heading > .events__heading--notChecked {
+                display: none;
+        }
+    }
+    
+    &--showcontent:not(:checked) ~ .events__content {
+        animation: disappearing 1s ease-out;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+}

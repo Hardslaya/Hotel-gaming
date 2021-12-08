@@ -37,3 +37,75 @@ body {
     text-transform: uppercase;
     color: $color-white;
 }
+
+.events__heading {
+    position: absolute;
+    display: inline-block;
+    background-image: linear-gradient(to right,
+    rgba($upgrade-pink, 0.9),
+    rgba($color-white, 1),
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    transform: translate(-9.5rem , 0rem);
+
+    font-size: 1.4rem;
+    letter-spacing: 1.2rem;
+
+    @include respond(tab-land) {
+        font-size: 1.5rem;
+        transform: translate(-8.7rem, 0rem);
+    }
+    @include respond(phone) {
+        font-size: 1.2rem;
+        transform: translate(-7.5rem , 0rem);
+    }
+
+    transition: all .2s;
+
+    &--notChecked {
+        opacity: 1;
+    }
+}
+
+.events__content--headings {
+    position: absolute;
+    display: inline-block;
+    background-image: linear-gradient(to right,
+    rgba($upgrade-pink, 0.9),
+    rgba($events-blue, 1),
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    transform: translateX(-64vh);
+
+    font-size: 1.4rem;
+    letter-spacing: 1.2rem;
+
+    @include respond(tab-port) {
+        transform: translateX(-85%);
+    }
+    @include respond(phone) {
+        transform: translateX(-67%);
+    }
+}
+
+.events__content--text {
+    @font-face {
+        font-family: "Bellerose";
+        src: "fonts/Bellerose.ttf";
+    }
+    font-family: "Bellerose";
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}

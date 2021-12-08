@@ -26,6 +26,26 @@
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes closingRectangle {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+  50% {
+    clip-path: polygon(15% 30%, 90% 20%, 90% 65%, 15% 60%); }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } }
+
+@keyframes appearing {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes disappearing {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 *,
 *::after,
 *::before {
@@ -78,6 +98,61 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: #fff; }
+
+.events__heading {
+  position: absolute;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgba(223, 37, 198, 0.9), white);
+  -webkit-background-clip: text;
+  color: transparent;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  transform: translate(-9.5rem, 0rem);
+  font-size: 1.4rem;
+  letter-spacing: 1.2rem;
+  transition: all .2s; }
+  @media only screen and (max-width: 75em) {
+    .events__heading {
+      font-size: 1.5rem;
+      transform: translate(-8.7rem, 0rem); } }
+  @media only screen and (max-width: 37.5em) {
+    .events__heading {
+      font-size: 1.2rem;
+      transform: translate(-7.5rem, 0rem); } }
+  .events__heading--notChecked {
+    opacity: 1; }
+
+.events__content--headings {
+  position: absolute;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgba(223, 37, 198, 0.9), #07a3be);
+  -webkit-background-clip: text;
+  color: transparent;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  transform: translateX(-64vh);
+  font-size: 1.4rem;
+  letter-spacing: 1.2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .events__content--headings {
+      transform: translateX(-85%); } }
+  @media only screen and (max-width: 37.5em) {
+    .events__content--headings {
+      transform: translateX(-67%); } }
+
+.events__content--text {
+  font-family: "Bellerose";
+  font-size: 1.5rem;
+  text-align: left;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem; }
+
+@font-face {
+  .events__content--text {
+    font-family: "Bellerose";
+    src: "fonts/Bellerose.ttf"; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -258,6 +333,9 @@ body {
       .booking__form__input--submit:hover {
         cursor: pointer;
         transform: translateY(-2px); }
+        @media only screen and (max-width: 75em) {
+          .booking__form__input--submit:hover {
+            transform: translate(-50%, -2px); } }
       @media only screen and (max-width: 75em) {
         .booking__form__input--submit {
           width: fit-content;
@@ -331,6 +409,86 @@ body {
   left: 0;
   z-index: -1;
   transition: all .4s; }
+
+.btn-events {
+  position: relative;
+  margin: 0 auto;
+  width: 100vh;
+  height: 50vh; }
+  .btn-events--btn {
+    z-index: 2;
+    position: relative;
+    margin: 0 auto;
+    width: 7em;
+    height: 7em;
+    top: 68%; }
+    @media only screen and (max-width: 75em) {
+      .btn-events--btn {
+        top: 70%; } }
+    @media only screen and (max-width: 56.25em) {
+      .btn-events--btn {
+        top: 70%; } }
+    @media only screen and (max-width: 37.5em) {
+      .btn-events--btn {
+        top: 48%;
+        left: -23%; } }
+    .btn-events--btn input[type=checkbox] + label {
+      display: block;
+      margin: 0.3em;
+      cursor: pointer;
+      padding: 0.3em; }
+    .btn-events--btn input[type=checkbox] {
+      display: none; }
+    .btn-events--btn input[type=checkbox] + label:before {
+      content: "";
+      background-color: #fd4e4e;
+      border: 0.2em solid #ff6c6c;
+      border-radius: 50em;
+      display: inline-block;
+      width: 6em;
+      height: 6em;
+      padding-left: 0.2em;
+      padding-bottom: 0.3em;
+      margin-right: 0.2em;
+      vertical-align: bottom;
+      color: transparent;
+      transition: .3s; }
+    .btn-events--btn input[type=checkbox] + label:active:before {
+      transform: scale(0); }
+    .btn-events--btn input[type=checkbox]:checked + label:before {
+      background-color: rgba(189, 255, 102, 0.521);
+      border-color: rgba(189, 255, 102, 0.521);
+      color: #fff; }
+  .btn-events--content {
+    display: inline-block;
+    background-image: linear-gradient(to right left, #df25c6, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; }
+  .btn-events--showcontent:checked ~ .events__content {
+    animation: appearing 1s ease-in;
+    opacity: 1;
+    height: 100vh;
+    width: 130vh; }
+    @media only screen and (max-width: 75em) {
+      .btn-events--showcontent:checked ~ .events__content {
+        width: 2000%;
+        height: 1000%; } }
+    @media only screen and (max-width: 56.25em) {
+      .btn-events--showcontent:checked ~ .events__content {
+        width: 630%;
+        height: 1000%; } }
+    @media only screen and (max-width: 37.5em) {
+      .btn-events--showcontent:checked ~ .events__content {
+        width: 500%;
+        height: 800%; } }
+  .btn-events--showcontent:checked ~ .events__heading > .events__heading--notChecked {
+    display: none; }
+  .btn-events--showcontent:not(:checked) ~ .events__content {
+    animation: disappearing 1s ease-out;
+    opacity: 0;
+    height: 0;
+    width: 0; }
 
 .parallax {
   background-attachment: fixed;
@@ -587,6 +745,9 @@ body {
       padding: 3rem;
       font-size: 3.5rem;
       color: black; }
+      @media only screen and (max-width: 75em) {
+        .tournament-ad__info--text {
+          letter-spacing: 0.2rem; } }
     .tournament-ad__info--button {
       width: fit-content;
       padding-top: 0.5rem;
@@ -631,12 +792,19 @@ body {
     opacity: 70%;
     font-size: medium;
     z-index: 50; }
+    @media only screen and (max-width: 75em) {
+      .tournament-ad:hover .tournament-ad__info {
+        opacity: 90%; } }
     .tournament-ad:hover .tournament-ad__info--text {
       text-align: center;
       letter-spacing: 0.2rem;
       font-size: 2rem;
       padding: 2rem;
       color: black; }
+      @media only screen and (max-width: 75em) {
+        .tournament-ad:hover .tournament-ad__info--text {
+          padding: 3rem;
+          font-size: 3.5rem; } }
 
 .footer {
   background-color: #000;
@@ -696,6 +864,10 @@ body {
       max-width: 100rem;
       padding: 0 3rem; } }
   @media only screen and (max-width: 56.25em) {
+    .row.section-tournaments {
+      max-width: 50rem;
+      padding: 0 3rem; } }
+  @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem;
       padding: 0 3rem; } }
@@ -752,6 +924,129 @@ body {
     .section-rooms {
       padding: 10rem 0 10rem 0; } }
 
+.section-events {
+  position: relative;
+  margin: 0 auto;
+  width: fit-content;
+  height: 160vh;
+  text-align: center;
+  transition: all .2s;
+  border-radius: 5rem; }
+  .section-events--hover {
+    position: absolute;
+    margin: 0 auto;
+    width: 100vh;
+    height: 50vh;
+    background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.7), rgba(7, 163, 190, 0.7)), url("../img/levelup.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+    border-radius: 5rem;
+    z-index: 1; }
+    @media only screen and (max-width: 37.5em) {
+      .section-events--hover {
+        width: 40%;
+        height: 50%;
+        transform: translateX(3%); } }
+    .section-events--hover:hover {
+      animation: closingRectangle 3s ease-in-out; }
+      .section-events--hover:hover .btn-events {
+        opacity: 0; }
+  .section-events .events__content {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    transition: all 1s;
+    position: relative;
+    margin: 0 auto;
+    transform: translate(-60vh, 20rem); }
+    @media only screen and (max-width: 75em) {
+      .section-events .events__content {
+        transform: translateY(-20%, 20%); } }
+    @media only screen and (max-width: 56.25em) {
+      .section-events .events__content {
+        transform: translate(-43%, 20%); } }
+    @media only screen and (max-width: 37.5em) {
+      .section-events .events__content {
+        transform: translate(-40%, 15%); } }
+    .section-events .events__content--gaming {
+      margin-bottom: -1.5rem;
+      width: 130vh;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/gaming.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .section-events .events__content--gaming {
+          width: 100%;
+          height: 50%; } }
+      @media only screen and (max-width: 37.5em) {
+        .section-events .events__content--gaming {
+          width: 100%;
+          height: 50%; } }
+    .section-events .events__content--celebrations {
+      margin-bottom: -1.5rem;
+      width: 130vh;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/celebrations.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .section-events .events__content--celebrations {
+          width: 100%;
+          height: 50%; } }
+      @media only screen and (max-width: 37.5em) {
+        .section-events .events__content--celebrations {
+          width: 100%;
+          height: 50%; } }
+    .section-events .events__content--wedding {
+      margin-bottom: -1.5rem;
+      width: 130vh;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/wedding.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .section-events .events__content--wedding {
+          width: 100%;
+          height: 50%; } }
+      @media only screen and (max-width: 37.5em) {
+        .section-events .events__content--wedding {
+          width: 100%;
+          height: 50%; } }
+    .section-events .events__content--meetings {
+      margin-bottom: -1.5rem;
+      width: 130vh;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/meetings.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .section-events .events__content--meetings {
+          width: 100%;
+          height: 50%; } }
+      @media only screen and (max-width: 37.5em) {
+        .section-events .events__content--meetings {
+          width: 100%;
+          height: 50%; } }
+    .section-events .events__content--headings-bg {
+      width: 30vh;
+      height: 3vh;
+      background-color: rgba(0, 0, 0, 0.3); }
+      @media only screen and (max-width: 75em) {
+        .section-events .events__content--headings-bg {
+          width: 35%; } }
+      @media only screen and (max-width: 56.25em) {
+        .section-events .events__content--headings-bg {
+          width: 58%; } }
+      @media only screen and (max-width: 37.5em) {
+        .section-events .events__content--headings-bg {
+          width: 72%; } }
+
 .section-tournaments {
   font-family: Play;
   height: 60rem;
@@ -765,6 +1060,7 @@ body {
       clip-path: polygon(0 0, 50% 2%, 100% 0, 100% 100%, 50% 102%, 0 100%); } }
   @media only screen and (max-width: 56.25em) {
     .section-tournaments {
+      padding: 4rem 0;
       clip-path: polygon(0 0, 50% 1%, 100% 0, 100% 100%, 50% 101%, 0 100%); } }
 
 .section-booking {
