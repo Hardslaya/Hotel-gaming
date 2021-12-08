@@ -195,7 +195,11 @@
 
                 &:hover{
                     cursor: pointer;
-                    transform: translateY(-2px);                   
+                    transform: translateY(-2px);  
+                    
+                    @include respond(tab-land){
+                        transform: translate(-50%,-2px);
+                    }
                 }
 
                 @include respond(tab-land){
