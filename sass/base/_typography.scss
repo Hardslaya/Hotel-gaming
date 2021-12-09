@@ -5,6 +5,57 @@ body {
     color: $color-grey-dark;
     background-color: $color-grey-light;  
 }
+.mainheader{
+    height: 100vh;
+    background-image: url('../img/portada.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $color-negroA1;
+    }
+
+
+    &-titulocaja{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40.8rem;
+        text-align: center;
+    }
+    &-titulo{
+        color: $color-blanco;
+        text-transform: capitalize;
+        animation-name: moverAbajo;
+        animation-duration: 2s;
+        transition: transform 0.5s;
+
+        &__principal{
+            display: block;
+            font-size: 6rem;
+            font-weight: 700;
+        
+        }
+        &__secunadario{
+            display: block;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 0.4rem;
+        }
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    
+}
 
 .heading {
     font-size: 3.5rem;

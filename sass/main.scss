@@ -7,14 +7,19 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/arrows";
 @import "components/booking";
 @import "components/button";
+@import "components/date";
 @import "components/parallax";
 @import "components/popup";
 @import "components/room-box";
 @import "components/tournment-ad";
 
+@import "layout/burger";
+@import "layout/darken";
 @import "layout/footer";
 @import "layout/grid";
+@import "layout/navegation";
 
 @import "pages/home";

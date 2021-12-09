@@ -1,0 +1,45 @@
+.navegacion {
+    position: absolute;
+    width: 100%;
+    height: 8rem;
+    animation-name: moverAbajo;
+    animation-duration: 2s;
+    @include respond(Tablet){
+        display: none;
+    }
+
+    &-logo{
+        height: 7rem;
+        margin-top: 4rem;
+        margin-left: 6rem;
+        margin-right: 5rem;
+        float: left;
+    }
+    &-menu{
+        float: left;
+        font-size: 25px;
+        font-weight: bold;
+        width: auto;
+        height: auto;
+        margin-left: 4rem;
+        margin-top: 4rem;
+        list-style: none;
+    
+    }
+    &-menu:hover{
+        cursor: pointer;
+    }
+    &-menu a{
+        color: $color-blanco;
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 1s;
+    }
+    &-menu a:hover{
+        background-size: 100% 2px;
+        color: $color-rosa;
+    }
+}

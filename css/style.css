@@ -46,6 +46,17 @@
   100% {
     opacity: 0; } }
 
+@keyframes moverAbajo {
+  0% {
+    opacity: 0;
+    transform: translateY(-50rem); }
+  90% {
+    opacity: 0.9;
+    transform: translateY(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 *,
 *::after,
 *::before {
@@ -53,14 +64,28 @@
   padding: 0;
   box-sizing: inherit; }
 
+body {
+  font: oblique bold 120% cursive;
+  font-weight: 400;
+  line-height: 1.7; }
+
 html {
   font-size: 62.5%; }
+  @media (max-width: 23.44em) {
+    html {
+      font-size: 40%; } }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 60%; } }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -71,6 +96,45 @@ body {
   line-height: 1.7;
   color: #777;
   background-color: #eee; }
+
+.mainheader {
+  height: 100vh;
+  background-image: url("../img/portada.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  .mainheader:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000066; }
+  .mainheader-titulocaja {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40.8rem;
+    text-align: center; }
+  .mainheader-titulo {
+    color: #fff;
+    text-transform: capitalize;
+    animation-name: moverAbajo;
+    animation-duration: 2s;
+    transition: transform 0.5s; }
+    .mainheader-titulo__principal {
+      display: block;
+      font-size: 6rem;
+      font-weight: 700; }
+    .mainheader-titulo__secunadario {
+      display: block;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.4rem; }
+    .mainheader-titulo:hover {
+      transform: scale(1.1); }
 
 .heading {
   font-size: 3.5rem;
@@ -178,6 +242,13 @@ body {
 .u-margin-huge {
   margin-top: 10rem !important; }
 
+.flechas {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 90%;
+  left: 50%; }
+
 .booking {
   height: 60rem;
   width: 100%;
@@ -199,11 +270,8 @@ body {
     background-image: url("../../img/mando2.jpg");
     background-position: 75%;
     background-size: cover;
-    left: 0;
-    top: 0;
     clip-path: ellipse(80% 80% at 2% 50%);
     position: absolute;
-    float: left;
     opacity: 80%; }
     @media only screen and (max-width: 75em) {
       .booking__image {
@@ -318,18 +386,17 @@ body {
     .booking__form__input--submit {
       position: absolute;
       left: 10rem;
-      --full: linear-gradient(red 0 0);
-      margin: 1rem auto;
+      margin: 3rem auto;
       border: solid .25em transparent;
       padding: 1rem 1.5rem;
       border-radius: 9rem;
-      background: linear-gradient(to right bottom, orange, #f9376b) border-box;
+      background-image: linear-gradient(to right bottom, orange, #f9376b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      border: 2px solid orange;
+      font-weight: 900;
       text-transform: uppercase; }
-      @supports (-webkit-mask-clip: text) {
-        .booking__form__input--submit {
-          -webkit-text-fill-color: transparent;
-          -webkit-mask: var(--full) text, var(--full) padding-box, var(--full);
-          -webkit-mask-composite: xor; } }
       .booking__form__input--submit:hover {
         cursor: pointer;
         transform: translateY(-2px); }
@@ -345,11 +412,31 @@ body {
           left: 50%;
           transform: translate(-50%, 0);
           padding: 1rem 1.5rem;
-          font-size: 2rem; } }
+          font-size: 3rem; } }
       @media only screen and (max-width: 56.25em) {
         .booking__form__input--submit {
-          font-size: 3rem;
           right: 50%; } }
+
+.boton {
+  width: 10rem;
+  height: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  background-color: transparent;
+  border: 0.3rem solid #b801b8;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  animation-name: moverAbajo;
+  animation-duration: 2s;
+  transition: all 0.2s; }
+  .boton:hover {
+    color: #b801b8;
+    border: 0.3rem solid #fff;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 2rem #b801b880; }
+  .boton:active {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 2rem #b801b8; }
 
 .btn, .btn:link, .btn:visited {
   font-size: 1.6rem;
@@ -489,6 +576,36 @@ body {
     opacity: 0;
     height: 0;
     width: 0; }
+
+.mainheader-registro {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60rem;
+  text-align: center; }
+  .mainheader-registro__date {
+    display: inline-block;
+    font-size: 2rem;
+    border: none;
+    border-bottom: 0.1rem solid #fff;
+    background: none;
+    margin-right: 2rem;
+    padding: 0.5rem;
+    width: 19rem;
+    outline: none;
+    color: #fff;
+    transition: 250ms width ease, 250ms border-color ease;
+    cursor: pointer;
+    animation-name: moverAbajo;
+    animation-duration: 2s; }
+    .mainheader-registro__date:hover {
+      width: 21rem; }
+    .mainheader-registro__date:focus {
+      width: 23rem;
+      border-color: #b801b8; }
+  .mainheader-registro input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); }
 
 .parallax {
   background-attachment: fixed;
@@ -806,6 +923,136 @@ body {
           padding: 3rem;
           font-size: 3.5rem; } }
 
+.burger__checkbox {
+  display: none; }
+
+.burger__button {
+  color: #b801b8;
+  background-color: transparent;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 3rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  text-align: center;
+  cursor: pointer; }
+
+.burger__background {
+  height: 100%;
+  width: 25rem;
+  position: fixed;
+  right: -25rem;
+  background-color: #3b003b;
+  z-index: 1500;
+  transition: all 0.8s; }
+
+.burger__oscurecer {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  background-color: #0000004d;
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.8s; }
+
+.burger__nav {
+  height: 100%;
+  width: 25rem;
+  position: fixed;
+  right: -1000rem;
+  z-index: 1700;
+  width: 100%;
+  transition: all 0.8s; }
+
+.burger__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  margin-left: 3rem;
+  width: 100%; }
+
+.burger__item {
+  margin: 1rem; }
+
+.burger__link {
+  /**/
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none; }
+
+.burger__checkbox:checked ~ .burger__background {
+  right: 0; }
+
+.burger__checkbox:checked ~ .burger__nav {
+  opacity: 1;
+  width: 25rem;
+  right: 0; }
+
+.burger__checkbox:checked ~ .burger__oscurecer {
+  width: 100%;
+  opacity: 1; }
+
+.burger__icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .burger__icon, .burger__icon::before, .burger__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #b801b8;
+    display: inline-block; }
+  .burger__icon::before, .burger__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .burger__icon::before {
+    top: -0.8rem; }
+  .burger__icon::after {
+    top: 0.8rem; }
+
+.burger__button:hover .burger__icon::before {
+  top: -1rem; }
+
+.burger__button:hover .burger__icon::after {
+  top: 1rem; }
+
+.burger__checkbox:checked + .burger__button .burger__icon {
+  background-color: transparent; }
+
+.burger__checkbox:checked + .burger__button .burger__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+  background-color: #fff; }
+
+.burger__checkbox:checked + .burger__button .burger__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+  background-color: #fff; }
+
+.oscurecer {
+  width: 100%;
+  height: 100vh;
+  transition: all 0.5s; }
+
+.navegacion:hover ~ .oscurecer {
+  width: 100%;
+  height: 100vh;
+  background-color: #0000004d; }
+
+.mainheader-titulocaja:hover ~ .oscurecer {
+  width: 100%;
+  height: 100vh;
+  background-color: #0000004d; }
+
+.mainheader-registro:hover ~ .oscurecer {
+  width: 100%;
+  height: 100vh;
+  background-color: #0000004d; }
+
 .footer {
   background-color: #000;
   padding: 5rem 0rem;
@@ -860,11 +1107,11 @@ body {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
   @media only screen and (max-width: 75em) {
-    .row.section-tournaments {
+    .row.section-tournaments-grid {
       max-width: 100rem;
       padding: 0 3rem; } }
   @media only screen and (max-width: 56.25em) {
-    .row.section-tournaments {
+    .row.section-tournaments-grid {
       max-width: 50rem;
       padding: 0 3rem; } }
   @media only screen and (max-width: 56.25em) {
@@ -906,16 +1153,54 @@ body {
           margin-right: 0;
           margin-bottom: 6rem; } }
     @media only screen and (max-width: 75em) {
-      .row [class^="col-"].section-tournaments {
+      .row [class^="col-"].section-tournaments-grid {
         width: 46.5% !important; }
-        .row [class^="col-"].section-tournaments:nth-child(even) {
+        .row [class^="col-"].section-tournaments-grid:nth-child(even) {
           margin-right: 0 !important; } }
     @media only screen and (max-width: 56.25em) {
-      .row [class^="col-"].section-tournaments {
+      .row [class^="col-"].section-tournaments-grid {
         width: 100% !important; } }
     @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
+
+.navegacion {
+  position: absolute;
+  width: 100%;
+  height: 8rem;
+  animation-name: moverAbajo;
+  animation-duration: 2s; }
+  @media (max-width: 56.25em) {
+    .navegacion {
+      display: none; } }
+  .navegacion-logo {
+    height: 7rem;
+    margin-top: 4rem;
+    margin-left: 6rem;
+    margin-right: 5rem;
+    float: left; }
+  .navegacion-menu {
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    list-style: none; }
+  .navegacion-menu:hover {
+    cursor: pointer; }
+  .navegacion-menu a {
+    color: #fff;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 1s; }
+  .navegacion-menu a:hover {
+    background-size: 100% 2px;
+    color: #b801b8; }
 
 .section-rooms {
   background-color: #eee;

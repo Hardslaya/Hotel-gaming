@@ -1,3 +1,29 @@
+.boton{
+    //display: inline-block;
+    width: 10rem;
+    height: 5rem;
+    font-size: 2rem;
+    color: $color-blanco;
+    background-color: transparent;
+    border: 0.3rem solid $color-rosa;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    animation-name: moverAbajo;
+    animation-duration: 2s;
+    transition: all 0.2s;
+
+    &:hover{
+        color: $color-rosa;
+        border: 0.3rem solid $color-blanco;
+        transform: translateY(-0.3rem);
+        box-shadow: 0 0.5rem 2rem $color-rosaA;
+    }
+    &:active{
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.5rem 2rem $color-rosa;
+    }
+}
+
 .btn {
     &,
     &:link,

@@ -1,0 +1,21 @@
+.oscurecer{
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s;
+}
+
+.navegacion:hover ~ .oscurecer{
+    width: 100%;
+    height: 100vh;
+    background-color: $color-negroA2;
+}
+.mainheader-titulocaja:hover ~ .oscurecer{
+    width: 100%;
+    height: 100vh;
+    background-color: $color-negroA2;
+}
+.mainheader-registro:hover ~ .oscurecer{
+    width: 100%;
+    height: 100vh;
+    background-color: $color-negroA2;
+}

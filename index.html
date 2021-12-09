@@ -8,10 +8,64 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="icon" href="./img/logo.png">
     <title>LAN Hotel | Living the gamer's life</title>
 </head>
     <body>
-        <div class="parallax parallax__section">
+
+        <div class="burger">
+            <input type="checkbox" class="burger__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="burger__button">
+                <span class="burger__icon">&nbsp;</span>
+            </label>
+            
+            <div class="burger__background">
+                &nbsp;
+            </div>
+            <div class="burger__oscurecer">
+                &nbsp;
+            </div>
+            
+                
+            <nav class="burger__nav">
+                <ul class="burger__list">
+                    <li class="burger__item"><a href="#habitaciones" class="burger__link">Habitaciones</a></li>
+                    <li class="burger__item"><a href="#eventos" class="burger__link">Eventos</a></li>
+                    <li class="burger__item"><a href="#torneos" class="burger__link">Torneos</a></li>
+                    <li class="burger__item"><a href="#reservas" class="burger__link">Reservas</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <header class="mainheader">
+            <nav class="navegacion">
+                <img src="img/logo.png" class="navegacion-logo">
+                <li class="navegacion-menu habitacion"><a href="#habitaciones">Habitaciones</a></li>
+                <li class="navegacion-menu"><a href="#eventos">Eventos</a></li>                    
+                <li class="navegacion-menu"><a href="#torneos">Torneos</a></li>
+                <li class="navegacion-menu"><a href="#reservas">Reservas</a></li>
+            </nav>
+        
+            <div class="mainheader-titulocaja">
+                <h1 class="mainheader-titulo">
+                    <span class="mainheader-titulo__principal">Hotel TheLAN</span>
+                    <span class="mainheader-titulo__secunadario">demuestra lo que sabes hacer</span>     
+                </h1>
+            </div>
+        
+            <div class="mainheader-registro">
+                <input placeholder="Entrada" type="text" onfocus="(this.type='date')" class="mainheader-registro__date">
+                <input placeholder="Salida" type="text" onfocus="(this.type='date')" class="mainheader-registro__date">
+                <input type="button" class="boton" value="Reservar">
+            </div>
+            <div>
+                <a href="#habitaciones"><img src="img/flechas.gif" class="flechas"></a>
+            </div>
+            <div class="oscurecer"></div>
+                    
+        </header>
+
+        <div class="parallax parallax__section"  id="habitaciones">
             <div class="parallax__text">
                 <h1 class="header">HABITACIONES</h2>
             </div>
@@ -121,13 +175,13 @@
             </div>
         </section>
 
-        <div class="parallax parallax__section">
+        <div class="parallax parallax__section" id="eventos">
             <div class="parallax__text">
                 <h1 class="header">EVENTOS</h2>
             </div>
         </div>
         
-        <section class="section-events">
+        <section class="section-events" >
             <div class="section-events--hover"></div>
             <div class="btn-events">
                 <div class="btn-events--btn">
@@ -193,15 +247,15 @@
             </div>
         </section>
 
-        <div class="parallax parallax__section">
+        <div class="parallax parallax__section"  id="torneos">
             <div class="parallax__text">
                 <h1 class="header">TORNEOS</h2>
             </div>
         </div>
 
         <section class="section-tournaments u-margin-bottom-big u-margin-top">
-            <div class="row section-tournaments">
-                <div class="col-1-of-4 section-tournaments">  
+            <div class="row section-tournaments-grid">
+                <div class="col-1-of-4 section-tournaments-grid">  
                     <div class="tournament-ad">
                         <div class="tournament-ad__image tournament-ad__1"></div>
                         <div class="tournament-ad__info">
@@ -213,7 +267,7 @@
                         </div>
                     </div>              
                 </div>
-                <div class="col-1-of-4 section-tournaments">
+                <div class="col-1-of-4 section-tournaments-grid">
                     <div class="tournament-ad">
                         <div class="tournament-ad__image tournament-ad__2"></div>
                         <div class="tournament-ad__info">
@@ -225,7 +279,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-1-of-4 section-tournaments">
+                <div class="col-1-of-4 section-tournaments-grid">
                     <div class="tournament-ad">
                         <div class="tournament-ad__image tournament-ad__3"></div>
                         <div class="tournament-ad__info">
@@ -237,7 +291,7 @@
                         </div>
                     </div> 
                 </div>
-                <div class="col-1-of-4 section-tournaments">
+                <div class="col-1-of-4 section-tournaments-grid">
                     <div class="tournament-ad">
                         <div class="tournament-ad__image tournament-ad__4"></div>
                         <div class="tournament-ad__info">
@@ -252,14 +306,14 @@
             </div>
         </section>  
 
-        <div class="parallax parallax__section">
+        <div class="parallax parallax__section" id="reservas">
             <div class="parallax__text">
                 <h1 class="header">RESERVAS</h2>
             </div>
         </div>
 
         
-        <section class="section-booking u-margin-bottom-big u-margin-top">      
+        <section class="section-booking u-margin-bottom-big u-margin-top" >      
             <div class="booking">
                 <div class="booking__image"></div>
                 <form action="." class="booking__form">

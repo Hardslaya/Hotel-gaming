@@ -9,7 +9,7 @@
         }
     }
 
-    &.section-tournaments{
+    &.section-tournaments-grid{
         @include respond(tab-land) {
             max-width: 100rem;
             padding: 0 3rem;
@@ -39,7 +39,7 @@
             margin-bottom: $gutter-vertical-small;
         }        
      }
-     &.section-tournaments{
+     &.section-tournaments-grid{
         @include respond(tab-land) {
 
             &:nth-child(even){
