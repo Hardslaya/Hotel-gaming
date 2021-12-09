@@ -260,7 +260,11 @@ body {
   @media only screen and (max-width: 75em) {
     .booking {
       border: 1px solid grey;
-      height: 85rem; } }
+      height: 85rem;
+      padding-top: 10rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .booking {
+      padding-top: 6rem; } }
   .booking__image {
     height: 60rem;
     width: 40%;
@@ -447,6 +451,9 @@ body {
   border: none;
   cursor: pointer;
   outline: none; }
+  @media only screen and (max-width: 75em) {
+    .btn, .btn:link, .btn:visited {
+      font-size: 1.4rem; } }
   .btn:hover, .btn:link:hover, .btn:visited:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -543,31 +550,41 @@ body {
       background-color: rgba(189, 255, 102, 0.521);
       border-color: rgba(189, 255, 102, 0.521);
       color: #fff; }
+  .btn-events--link {
+    position: relative;
+    z-index: 10;
+    width: 7rem;
+    height: 7rem;
+    color: red;
+    top: 5.5rem; }
   .btn-events--content {
     display: inline-block;
     background-image: linear-gradient(to right left, #df25c6, white);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent; }
-  .btn-events--showcontent:checked ~ .events__content {
-    animation: appearing 1s ease-in;
-    opacity: 1;
-    height: 100vh;
-    width: 130vh; }
-    @media only screen and (max-width: 75em) {
-      .btn-events--showcontent:checked ~ .events__content {
-        width: 2000%;
-        height: 1000%; } }
-    @media only screen and (max-width: 56.25em) {
-      .btn-events--showcontent:checked ~ .events__content {
-        width: 630%;
-        height: 1000%; } }
-    @media only screen and (max-width: 37.5em) {
-      .btn-events--showcontent:checked ~ .events__content {
-        width: 500%;
-        height: 800%; } }
-  .btn-events--showcontent:checked ~ .events__heading > .events__heading--notChecked {
-    display: none; }
+  .btn-events--showcontent:checked {
+    /*& ~ .events__content {
+            animation: appearing 1s ease-in;
+            opacity: 1;
+            height: 100vh;
+            width: 130vh;
+
+            @include respond(tab-land) {
+                width: 2000%;
+                height: 1000%;
+            }
+            @include respond(tab-port) {
+                width: 630%;
+                height: 1000%;
+            }
+            @include respond(phone) {
+                width: 500%;
+                height: 800%;
+            }
+        }*/ }
+    .btn-events--showcontent:checked ~ .events__heading > .events__heading--notChecked {
+      display: none; }
   .btn-events--showcontent:not(:checked) ~ .events__content {
     animation: disappearing 1s ease-out;
     opacity: 0;
@@ -1149,6 +1166,7 @@ body {
           margin-bottom: 6rem; } }
     @media only screen and (max-width: 75em) {
       .row [class^="col-"].section-tournaments-grid {
+        margin-bottom: 6rem;
         width: 46.5% !important; }
         .row [class^="col-"].section-tournaments-grid:nth-child(even) {
           margin-right: 0 !important; } }
@@ -1208,7 +1226,8 @@ body {
   position: relative;
   margin: 0 auto;
   width: fit-content;
-  height: 160vh;
+  height: fit-content;
+  padding: 10rem;
   text-align: center;
   transition: all .2s;
   border-radius: 5rem; }
@@ -1335,10 +1354,11 @@ body {
   height: 60rem;
   background-color: #fff;
   clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 0 100%);
-  padding-top: 2rem; }
+  padding-top: 6.5rem; }
   @media only screen and (max-width: 75em) {
     .section-tournaments {
-      padding: 10rem 0;
+      padding-top: 16rem;
+      padding-bottom: 10rem;
       height: fit-content;
       clip-path: polygon(0 0, 50% 2%, 100% 0, 100% 100%, 50% 102%, 0 100%); } }
   @media only screen and (max-width: 56.25em) {

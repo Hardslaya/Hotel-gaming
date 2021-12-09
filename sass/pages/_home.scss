@@ -132,16 +132,17 @@
     height: 60rem;
     background-color: $color-white;
     clip-path: polygon(0 0, 50% 5%,100% 0, 100% 100%, 0 100%);
-    padding-top: 2rem;
+    padding-top: 6.5rem;
 
     @include respond(tab-land) {
-        padding: 10rem 0;
+        //padding: 10rem 0;
+        padding-top: 16rem;
+        padding-bottom: 10rem;
         height: fit-content;
         clip-path: polygon(0 0, 50% 2%,100% 0, 100% 100%, 50% 102%, 0 100%);
     }
 
     @include respond(tab-port) {
-        padding: 4rem 0;
         clip-path: polygon(0 0, 50% 1%,100% 0, 100% 100%, 50% 101%, 0 100%);
     }
 

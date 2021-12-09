@@ -11,6 +11,11 @@
     @include respond(tab-land){
         border: 1px solid grey;
         height: 85rem;
+        padding-top: 10rem;
+    }
+
+    @include respond(tab-port){
+        padding-top: 6rem;
     }
 
     &__image{

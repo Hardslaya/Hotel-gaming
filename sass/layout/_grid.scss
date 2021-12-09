@@ -41,6 +41,7 @@
      }
      &.section-tournaments-grid{
         @include respond(tab-land) {
+            margin-bottom: 6rem;
 
             &:nth-child(even){
                 margin-right: 0 !important;
