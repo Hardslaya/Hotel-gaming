@@ -39,6 +39,9 @@
         border: none;
         cursor: pointer;
         outline: none;
+        @include respond(tab-land){
+            font-size: 1.4rem;
+        }    
 
         &:hover {
             transform: translateY(-3px);
@@ -172,6 +175,15 @@
         }
     }
 
+    &--link {
+        position: relative;
+        z-index: 10;
+        width: 7rem;
+        height: 7rem;
+        color: red;
+        top: 5.5rem;
+    }
+
     &--content {
         display: inline-block;
         background-image: linear-gradient(to right left,
@@ -184,7 +196,7 @@
     }
 
     &--showcontent:checked {        
-        & ~ .events__content {
+        /*& ~ .events__content {
             animation: appearing 1s ease-in;
             opacity: 1;
             height: 100vh;
@@ -202,7 +214,7 @@
                 width: 500%;
                 height: 800%;
             }
-        }
+        }*/
 
         & ~ .events__heading > .events__heading--notChecked {
                 display: none;
