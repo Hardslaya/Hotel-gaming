@@ -836,7 +836,7 @@ body {
         opacity: 100%;
         font-size: medium;
         z-index: 50; } }
-    .tournament-ad__info--heading-tertiary {
+    .tournament-ad__info--heading {
       margin: 0 0 auto auto;
       padding: 1rem;
       width: fit-content;
@@ -849,12 +849,12 @@ body {
       color: white;
       opacity: 100%; }
       @media only screen and (max-width: 75em) {
-        .tournament-ad__info--heading-tertiary {
+        .tournament-ad__info--heading {
           padding: 1rem;
           font-size: 3.5rem;
           opacity: 80%; } }
       @media only screen and (max-width: 56.25em) {
-        .tournament-ad__info--heading-tertiary {
+        .tournament-ad__info--heading {
           padding: 3rem;
           font-size: 3rem; } }
     .tournament-ad__info--text {
