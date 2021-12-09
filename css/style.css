@@ -261,9 +261,6 @@ body {
     .booking {
       border: 1px solid grey;
       height: 85rem; } }
-  @media only screen and (max-width: 56.25em) {
-    .booking {
-      height: 95rem; } }
   .booking__image {
     height: 60rem;
     width: 40%;
@@ -1348,7 +1345,6 @@ body {
       clip-path: polygon(0 0, 50% 2%, 100% 0, 100% 100%, 50% 102%, 0 100%); } }
   @media only screen and (max-width: 56.25em) {
     .section-tournaments {
-      padding: 4rem 0;
       clip-path: polygon(0 0, 50% 1%, 100% 0, 100% 100%, 50% 101%, 0 100%); } }
 
 .section-booking {

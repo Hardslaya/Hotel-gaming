@@ -13,10 +13,6 @@
         height: 85rem;
     }
 
-    @include respond(tab-port){
-        height: 95rem;
-    }
-
     &__image{
         height: 60rem;
         width: 40%;

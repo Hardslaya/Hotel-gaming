@@ -140,7 +140,6 @@
     }
 
     @include respond(tab-port) {
-        padding: 4rem 0;
         clip-path: polygon(0 0, 50% 1%,100% 0, 100% 100%, 50% 101%, 0 100%);
     }
 
