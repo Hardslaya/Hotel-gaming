@@ -172,22 +172,23 @@ body {
   width: fit-content;
   height: fit-content;
   margin: 0 auto;
-  transform: translate(-9.5rem, 0rem);
+  transform: translate(-9rem, -1rem);
   font-size: 1.4rem;
   letter-spacing: 1.2rem;
   transition: all .2s; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (min-width: 112.5em) {
+    .events__heading {
+      transform: translate(-8.5rem, -1.3rem); } }
+  @media only screen and (max-width: 56.25em) {
     .events__heading {
       font-size: 1.5rem;
-      transform: translate(-8.7rem, 0rem); } }
+      transform: translate(-9rem, -1rem); } }
   @media only screen and (max-width: 37.5em) {
     .events__heading {
       font-size: 1.2rem;
-      transform: translate(-7.5rem, 0rem); } }
-  .events__heading--notChecked {
-    opacity: 1; }
+      transform: translate(-8rem, -1.5rem); } }
 
-.events__content--headings {
+.popup__events--headings {
   position: absolute;
   display: inline-block;
   background-image: linear-gradient(to right, rgba(223, 37, 198, 0.9), #07a3be);
@@ -196,25 +197,19 @@ body {
   width: fit-content;
   height: fit-content;
   margin: 0 auto;
-  transform: translateX(-64vh);
+  transform: translateX(1rem);
   font-size: 1.4rem;
   letter-spacing: 1.2rem; }
-  @media only screen and (max-width: 56.25em) {
-    .events__content--headings {
-      transform: translateX(-85%); } }
-  @media only screen and (max-width: 37.5em) {
-    .events__content--headings {
-      transform: translateX(-67%); } }
 
-.events__content--text {
+.popup__events--text {
+  color: #000;
   font-family: "Bellerose";
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: left;
-  margin-left: 1.5rem;
-  margin-top: 0.5rem; }
+  margin-left: 1.5rem; }
 
 @font-face {
-  .events__content--text {
+  .popup__events--text {
     font-family: "Bellerose";
     src: "fonts/Bellerose.ttf"; } }
 
@@ -507,89 +502,38 @@ body {
   width: 100vh;
   height: 50vh; }
   .btn-events--btn {
-    z-index: 2;
+    z-index: 1;
     position: relative;
     margin: 0 auto;
-    width: 7em;
-    height: 7em;
-    top: 68%; }
-    @media only screen and (max-width: 75em) {
-      .btn-events--btn {
-        top: 70%; } }
+    width: 10%;
+    height: 20%;
+    border-radius: 5rem;
+    top: 65%; }
     @media only screen and (max-width: 56.25em) {
       .btn-events--btn {
-        top: 60%; } }
+        top: 65%;
+        left: -8%; } }
     @media only screen and (max-width: 37.5em) {
       .btn-events--btn {
-        top: 120%;
-        left: -30%; } }
-    .btn-events--btn input[type=checkbox] + label {
-      display: block;
-      margin: 0.3em;
-      cursor: pointer;
-      padding: 0.3em; }
-    .btn-events--btn input[type=checkbox] {
-      display: none; }
-    .btn-events--btn input[type=checkbox] + label:before {
-      content: "";
-      background-color: #fd4e4e;
-      border: 0.2em solid #ff6c6c;
-      border-radius: 50em;
+        top: 50%;
+        left: -36%; } }
+    .btn-events--btn-link, .btn-events--btn-link:link, .btn-events--btn-link:visited {
+      background-color: #df3131;
+      clip-path: circle(30%);
+      border-radius: 5rem;
+      width: 100%;
+      height: 100%;
+      transform: translate(-27.5%, -6%);
+      padding: 0.5rem 4rem;
       display: inline-block;
-      width: 6em;
-      height: 6em;
-      padding-left: 0.2em;
-      padding-bottom: 0.3em;
-      margin-right: 0.2em;
-      vertical-align: bottom;
-      color: transparent;
-      transition: .3s; }
-    .btn-events--btn input[type=checkbox] + label:active:before {
-      transform: scale(0); }
-    .btn-events--btn input[type=checkbox]:checked + label:before {
-      background-color: rgba(189, 255, 102, 0.521);
-      border-color: rgba(189, 255, 102, 0.521);
-      color: #fff; }
-  .btn-events--link {
-    position: relative;
-    z-index: 10;
-    width: 7rem;
-    height: 7rem;
-    color: red;
-    top: 5.5rem; }
-  .btn-events--content {
-    display: inline-block;
-    background-image: linear-gradient(to right left, #df25c6, white);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; }
-  .btn-events--showcontent:checked {
-    /*& ~ .events__content {
-            animation: appearing 1s ease-in;
-            opacity: 1;
-            height: 100vh;
-            width: 130vh;
-
-            @include respond(tab-land) {
-                width: 2000%;
-                height: 1000%;
-            }
-            @include respond(tab-port) {
-                width: 630%;
-                height: 1000%;
-            }
-            @include respond(phone) {
-                width: 500%;
-                height: 800%;
-            }
-        }*/ }
-    .btn-events--showcontent:checked ~ .events__heading > .events__heading--notChecked {
-      display: none; }
-  .btn-events--showcontent:not(:checked) ~ .events__content {
-    animation: disappearing 1s ease-out;
-    opacity: 0;
-    height: 0;
-    width: 0; }
+      transition: all 0.5s;
+      position: relative;
+      border: none;
+      cursor: pointer;
+      outline: none; }
+    .btn-events--btn-link:hover, .btn-events--btn-link:active, .btn-events--btn-link:focus {
+      transform: translate(-28%, -15%);
+      background-color: rgba(189, 255, 102, 0.521); }
 
 .mainheader-registro {
   position: absolute;
@@ -661,18 +605,20 @@ body {
   .popup:target .popup__content {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
-  .popup__close:link, .popup__close:visited {
-    color: #777;
-    position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
-    font-size: 3rem;
-    text-decoration: none;
-    display: inline-block;
-    transition: all0 0.2s;
-    line-height: 1; }
-  .popup__close:hover {
-    color: #eee; }
+  .popup__close {
+    z-index: 1; }
+    .popup__close:link, .popup__close:visited {
+      color: #777;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all0 0.2s;
+      line-height: 1; }
+    .popup__close:hover {
+      color: #eee; }
   .popup__main {
     position: absolute;
     top: 50%;
@@ -722,6 +668,64 @@ body {
         column-count: 1;
         column-gap: 2rem;
         font-size: 1rem; } }
+  .popup__events {
+    transition: all 1s;
+    position: relative;
+    margin: 0 auto;
+    /*@include respond(tab-land) {
+            transform: translateY(-20%, 20%);
+        }
+        @include respond(tab-port) {
+            transform: translate(-43%, 20%);
+        }
+        @include respond(phone) {
+            transform: translate(-40%, 50%);
+        }*/ }
+    .popup__events--gaming {
+      margin-bottom: -1.5rem;
+      width: 100%;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/gaming.jpg"); }
+    .popup__events--celebrations {
+      margin-bottom: -1.5rem;
+      width: 100%;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/celebrations.jpg"); }
+    .popup__events--wedding {
+      margin-bottom: -1.5rem;
+      width: 100%;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/wedding.jpg"); }
+    .popup__events--meetings {
+      margin-bottom: -1.5rem;
+      width: 100%;
+      height: 25vh;
+      background-size: cover;
+      background-position: right;
+      position: relative;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/meetings.jpg"); }
+    .popup__events--headings-bg {
+      width: inherit;
+      height: 3vh;
+      background-color: rgba(0, 0, 0, 0.3); }
+      @media only screen and (max-width: 75em) {
+        .popup__events--headings-bg {
+          width: 35%; } }
+      @media only screen and (max-width: 56.25em) {
+        .popup__events--headings-bg {
+          width: 58%; } }
+      @media only screen and (max-width: 37.5em) {
+        .popup__events--headings-bg {
+          width: 72%; } }
 
 .room-box {
   perspective: 150rem;
@@ -1231,9 +1235,6 @@ body {
   text-align: center;
   transition: all .2s;
   border-radius: 5rem; }
-  @media only screen and (max-width: 56.25em) {
-    .section-events {
-      height: 190vh; } }
   .section-events--hover {
     position: absolute;
     margin: 0 auto;
@@ -1245,109 +1246,18 @@ body {
     transition: all .2s;
     border-radius: 5rem;
     z-index: 1; }
+    @media only screen and (max-width: 56.25em) {
+      .section-events--hover {
+        transform: translateX(-11%); } }
     @media only screen and (max-width: 37.5em) {
       .section-events--hover {
         width: 40%;
         height: 50%;
-        transform: translateX(3%); } }
+        transform: translateX(-25%); } }
     .section-events--hover:hover {
       animation: closingRectangle 3s ease-in-out; }
       .section-events--hover:hover .btn-events {
         opacity: 0; }
-  .section-events .events__content {
-    opacity: 0;
-    overflow: hidden;
-    height: 0;
-    transition: all 1s;
-    position: relative;
-    margin: 0 auto;
-    transform: translate(-60vh, 20rem); }
-    @media only screen and (max-width: 75em) {
-      .section-events .events__content {
-        transform: translateY(-20%, 20%); } }
-    @media only screen and (max-width: 56.25em) {
-      .section-events .events__content {
-        transform: translate(-43%, 20%); } }
-    @media only screen and (max-width: 37.5em) {
-      .section-events .events__content {
-        transform: translate(-40%, 50%); } }
-    .section-events .events__content--gaming {
-      margin-bottom: -1.5rem;
-      width: 130vh;
-      height: 25vh;
-      background-size: cover;
-      background-position: right;
-      position: relative;
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/gaming.jpg"); }
-      @media only screen and (max-width: 56.25em) {
-        .section-events .events__content--gaming {
-          width: 100%;
-          height: 50%; } }
-      @media only screen and (max-width: 37.5em) {
-        .section-events .events__content--gaming {
-          width: 100%;
-          height: 50%; } }
-    .section-events .events__content--celebrations {
-      margin-bottom: -1.5rem;
-      width: 130vh;
-      height: 25vh;
-      background-size: cover;
-      background-position: right;
-      position: relative;
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/celebrations.jpg"); }
-      @media only screen and (max-width: 56.25em) {
-        .section-events .events__content--celebrations {
-          width: 100%;
-          height: 50%; } }
-      @media only screen and (max-width: 37.5em) {
-        .section-events .events__content--celebrations {
-          width: 100%;
-          height: 50%; } }
-    .section-events .events__content--wedding {
-      margin-bottom: -1.5rem;
-      width: 130vh;
-      height: 25vh;
-      background-size: cover;
-      background-position: right;
-      position: relative;
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/wedding.jpg"); }
-      @media only screen and (max-width: 56.25em) {
-        .section-events .events__content--wedding {
-          width: 100%;
-          height: 50%; } }
-      @media only screen and (max-width: 37.5em) {
-        .section-events .events__content--wedding {
-          width: 100%;
-          height: 50%; } }
-    .section-events .events__content--meetings {
-      margin-bottom: -1.5rem;
-      width: 130vh;
-      height: 25vh;
-      background-size: cover;
-      background-position: right;
-      position: relative;
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/meetings.jpg"); }
-      @media only screen and (max-width: 56.25em) {
-        .section-events .events__content--meetings {
-          width: 100%;
-          height: 50%; } }
-      @media only screen and (max-width: 37.5em) {
-        .section-events .events__content--meetings {
-          width: 100%;
-          height: 50%; } }
-    .section-events .events__content--headings-bg {
-      width: 30vh;
-      height: 3vh;
-      background-color: rgba(0, 0, 0, 0.3); }
-      @media only screen and (max-width: 75em) {
-        .section-events .events__content--headings-bg {
-          width: 35%; } }
-      @media only screen and (max-width: 56.25em) {
-        .section-events .events__content--headings-bg {
-          width: 58%; } }
-      @media only screen and (max-width: 37.5em) {
-        .section-events .events__content--headings-bg {
-          width: 72%; } }
 
 .section-tournaments {
   font-family: Lato;
