@@ -104,42 +104,6 @@
                 letter-spacing: 0.2rem;
             }  
         }
-
-        &--button{
-            width: fit-content;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            border-radius: 2rem;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, 0);
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 0.2rem;
-            font-weight: 900;
-            background: linear-gradient(to left, $color-purple-light, $color-purple-dark);
-            color: white;
-
-            &:hover{
-                transform: translate(-50%, -2px);
-                background: linear-gradient(to left, $color-purple-light, $color-purple-dark);
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-            }
-
-            @include respond(tab-land) {
-                font-size: 3.5rem;
-                padding: 1rem 3rem;
-                opacity: 90%;
-                margin-top: 2rem;
-            }
-
-            @include respond(tab-port) {
-                font-size: 3rem;
-                margin-top: 0;
-            }
-        }
     }
 
     &__info hr{

@@ -1,10 +1,10 @@
-.navegacion {
+.navegation {
     position: absolute;
     width: 100%;
     height: 8rem;
-    animation-name: moverAbajo;
+    animation-name: moveDown;
     animation-duration: 2s;
-    @include respond(Tablet){
+    @include respond(tab-port){
         display: none;
     }
 
@@ -30,7 +30,7 @@
         cursor: pointer;
     }
     &-menu a{
-        color: $color-blanco;
+        color: $color-white;
         text-decoration: none;
         background-image: linear-gradient(currentColor, currentColor);
         background-position: 0% 100%;
@@ -40,6 +40,6 @@
     }
     &-menu a:hover{
         background-size: 100% 2px;
-        color: $color-rosa;
+        color: $color-purple-light;
     }
 }

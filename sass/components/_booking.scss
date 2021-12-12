@@ -1,4 +1,3 @@
-
 .booking{
     height: 60rem;
     width: 100%;
@@ -33,7 +32,7 @@
         }
     }
 
-    &__form{
+    &__form {
         width: 60%;
         height: inherit;
         background-color: transparent;
@@ -46,16 +45,13 @@
         margin-top: 5rem;
 
         @include respond(tab-land){
-            position: absolute;
             padding: 0;
             width: 90%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);  
+            @include absCenter;
             color: white;         
         }
 
-        & p{
+        & p {
             background-image: linear-gradient(to right, #f9376b 20%, orange);
             -webkit-background-clip: text;
             background-clip: text;
@@ -128,7 +124,7 @@
                     cursor: pointer;
                 }
 
-                &__button {
+                &-check {
                     height: 3rem;
                     width: 3rem;
                     border-radius: 5px;
@@ -152,7 +148,7 @@
                     }
                 }
 
-                &__input:checked~&__label &__button::after{
+                &__input:checked~&__label &-check::after{
                     opacity: 1;
                 }
 
@@ -174,29 +170,6 @@
             &--submit{
                 position: absolute;
                 left: 10rem;
-
-                margin: 3rem auto;
-                border: solid .25em transparent;
-                padding: 1rem 1.5rem;
-                border-radius: 9rem;
-
-                background-image: linear-gradient(to right bottom, orange, #f9376b);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                border: 2px solid orange;
-                
-                font-weight: 900;       
-                text-transform: uppercase;
-
-                &:hover{
-                    cursor: pointer;
-                    transform: translateY(-2px);
-                    
-                    @include respond(tab-land){
-                        transform: translate(-50%,-2px);
-                    }
-                }
 
                 @include respond(tab-land){
                     width: fit-content;

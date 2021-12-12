@@ -101,17 +101,6 @@
         transition: all 1s;
         position: relative;
         margin: 0 auto;
-        //transform: translate(-60vh, 20rem);
-
-        /*@include respond(tab-land) {
-            transform: translateY(-20%, 20%);
-        }
-        @include respond(tab-port) {
-            transform: translate(-43%, 20%);
-        }
-        @include respond(phone) {
-            transform: translate(-40%, 50%);
-        }*/
 
         &--gaming{
             @include events-popup-content;

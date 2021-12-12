@@ -4,7 +4,7 @@
     }
 
     &__button {
-        color: $color-rosa;
+        color: $color-purple-light;
         background-color: transparent;
         height: 7rem;
         width: 7rem;
@@ -22,15 +22,16 @@
         width: 25rem;
         position: fixed;
         right: -25rem;
-        background-color: $color-morado;
+        background-color: $color-purple-dark-2;
         z-index: 1500;
         transition: all 0.8s;
     }
-    &__oscurecer {
+
+    &__darken {
         height: 100%;
         width: 0;
         position: fixed;
-        background-color: $color-negroA2;
+        background-color: $color-black-3;
         z-index: 1000;
         opacity: 0;
         transition: all 0.8s;
@@ -60,33 +61,38 @@
         margin: 1rem;
     }
 
-    &__link { /**/       
+    &__link {       
         font-size: 2rem;
-        color: $color-blanco;
+        color: $color-white;
         text-decoration: none;
 
     }
+
     &__checkbox:checked~&__background {
         right: 0;
     }
+
     &__checkbox:checked~&__nav {
         opacity: 1;
         width: 25rem;
         right: 0;
     }
-    &__checkbox:checked~&__oscurecer {
+
+    &__checkbox:checked~&__darken {
         width: 100%;
         opacity: 1;
     }
+
 &__icon {
     position: relative;
     margin-top: 3.5rem;
+
     &,
     &::before,
     &::after {
         width: 3rem;
         height: 2px;
-        background-color: $color-rosa;
+        background-color: $color-purple-light;
         display: inline-block;
     }
 
@@ -106,6 +112,7 @@
             top: 0.8rem;
         }
     }
+
     &__button:hover &__icon::before {
         top: -1rem;
     }
@@ -114,6 +121,7 @@
         top: 1rem;
 
     }
+    
     &__checkbox:checked+&__button &__icon {
         background-color: transparent;
     }
@@ -121,12 +129,12 @@
     &__checkbox:checked+&__button &__icon::before {
         top: 0;
         transform: rotate(135deg);
-        background-color: $color-blanco;
+        background-color: $color-white;
     }
 
     &__checkbox:checked+&__button &__icon::after {
         top: 0;
         transform: rotate(-135deg);
-        background-color: $color-blanco;
+        background-color: $color-white;
     }
 }

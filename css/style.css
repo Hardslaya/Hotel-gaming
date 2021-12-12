@@ -1,31 +1,3 @@
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInButton {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
 @keyframes closingRectangle {
   0% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
@@ -34,19 +6,7 @@
   100% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); } }
 
-@keyframes appearing {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes disappearing {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-@keyframes moverAbajo {
+@keyframes moveDown {
   0% {
     opacity: 0;
     transform: translateY(-50rem); }
@@ -71,21 +31,12 @@ body {
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 23.44em) {
-    html {
-      font-size: 40%; } }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 37.5em) {
-    html {
-      font-size: 50%; } }
-  @media (max-width: 56.25em) {
-    html {
-      font-size: 60%; } }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -96,45 +47,6 @@ body {
   line-height: 1.7;
   color: #777;
   background-color: #eee; }
-
-.mainheader {
-  height: 100vh;
-  background-image: url("../img/portada.jpg");
-  background-size: cover;
-  background-position: top;
-  position: relative; }
-  .mainheader:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #00000066; }
-  .mainheader-titulocaja {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40.8rem;
-    text-align: center; }
-  .mainheader-titulo {
-    color: #fff;
-    text-transform: capitalize;
-    animation-name: moverAbajo;
-    animation-duration: 2s;
-    transition: transform 0.5s; }
-    .mainheader-titulo__principal {
-      display: block;
-      font-size: 6rem;
-      font-weight: 700; }
-    .mainheader-titulo__secunadario {
-      display: block;
-      font-size: 2rem;
-      font-weight: 400;
-      letter-spacing: 0.4rem; }
-    .mainheader-titulo:hover {
-      transform: scale(1.1); }
 
 .heading {
   font-size: 3.5rem;
@@ -191,7 +103,7 @@ body {
 .popup__events--headings {
   position: absolute;
   display: inline-block;
-  background-image: linear-gradient(to right, rgba(223, 37, 198, 0.9), #07a3be);
+  background-image: linear-gradient(to right, rgba(223, 37, 198, 0.9), #00b4c9);
   -webkit-background-clip: text;
   color: transparent;
   width: fit-content;
@@ -206,7 +118,8 @@ body {
   font-family: "Bellerose";
   font-size: 1.3rem;
   text-align: left;
-  margin-left: 1.5rem; }
+  margin-left: 1.5rem;
+  text-shadow: 1rem 0rem 1rem #f6fa00; }
 
 @font-face {
   .popup__events--text {
@@ -237,7 +150,7 @@ body {
 .u-margin-huge {
   margin-top: 10rem !important; }
 
-.flechas {
+.arrows {
   width: 5rem;
   height: 5rem;
   position: absolute;
@@ -285,9 +198,9 @@ body {
     margin-top: 5rem; }
     @media only screen and (max-width: 75em) {
       .booking__form {
-        position: absolute;
         padding: 0;
         width: 90%;
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -347,7 +260,7 @@ body {
           display: none; }
         .booking__form-group--radio__label {
           cursor: pointer; }
-        .booking__form-group--radio__button {
+        .booking__form-group--radio-check {
           height: 3rem;
           width: 3rem;
           border-radius: 5px;
@@ -357,7 +270,7 @@ body {
           display: inline-block;
           left: 0;
           top: -0.4rem; }
-          .booking__form-group--radio__button::after {
+          .booking__form-group--radio-check::after {
             content: "";
             background-position-y: center;
             background-size: cover;
@@ -367,7 +280,7 @@ body {
             background-image: url(../../img/checked.png);
             opacity: 0;
             transition: opacity 0.2s; }
-        .booking__form-group--radio__input:checked ~ .booking__form-group--radio__label .booking__form-group--radio__button::after {
+        .booking__form-group--radio__input:checked ~ .booking__form-group--radio__label .booking__form-group--radio-check::after {
           opacity: 1; }
         @media only screen and (max-width: 75em) {
           .booking__form-group--radio {
@@ -381,24 +294,7 @@ body {
             font-size: 3rem; } }
     .booking__form__input--submit {
       position: absolute;
-      left: 10rem;
-      margin: 3rem auto;
-      border: solid .25em transparent;
-      padding: 1rem 1.5rem;
-      border-radius: 9rem;
-      background-image: linear-gradient(to right bottom, orange, #f9376b);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      border: 2px solid orange;
-      font-weight: 900;
-      text-transform: uppercase; }
-      .booking__form__input--submit:hover {
-        cursor: pointer;
-        transform: translateY(-2px); }
-        @media only screen and (max-width: 75em) {
-          .booking__form__input--submit:hover {
-            transform: translate(-50%, -2px); } }
+      left: 10rem; }
       @media only screen and (max-width: 75em) {
         .booking__form__input--submit {
           width: fit-content;
@@ -413,28 +309,28 @@ body {
         .booking__form__input--submit {
           right: 50%; } }
 
-.boton {
+.btn__main {
   width: 10rem;
   height: 5rem;
   font-size: 2rem;
   color: #fff;
   background-color: transparent;
-  border: 0.3rem solid #b801b8;
+  border: 0.3rem solid #b030b0;
   border-radius: 1.5rem;
   cursor: pointer;
-  animation-name: moverAbajo;
+  animation-name: moveDown;
   animation-duration: 2s;
   transition: all 0.2s; }
-  .boton:hover {
-    color: #b801b8;
+  .btn__main:hover {
+    color: #b030b0;
     border: 0.3rem solid #fff;
     transform: translateY(-0.3rem);
-    box-shadow: 0 0.5rem 2rem #b801b880; }
-  .boton:active {
+    box-shadow: 0 0.5rem 2rem #602080; }
+  .btn__main:active {
     transform: translateY(-0.2rem);
-    box-shadow: 0 0.5rem 2rem #b801b8; }
+    box-shadow: 0 0.5rem 2rem #b030b0; }
 
-.btn, .btn:link, .btn:visited {
+.btn__room-box, .btn__room-box:link, .btn__room-box:visited {
   font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -447,44 +343,44 @@ body {
   cursor: pointer;
   outline: none; }
   @media only screen and (max-width: 75em) {
-    .btn, .btn:link, .btn:visited {
+    .btn__room-box, .btn__room-box:link, .btn__room-box:visited {
       font-size: 1.4rem; } }
-  .btn:hover, .btn:link:hover, .btn:visited:hover {
+  .btn__room-box:hover, .btn__room-box:link:hover, .btn__room-box:visited:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-    .btn:hover::after, .btn:link:hover::after, .btn:visited:hover::after {
+    .btn__room-box:hover::after, .btn__room-box:link:hover::after, .btn__room-box:visited:hover::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0; }
-  .btn:active, .btn:focus, .btn:link:active, .btn:link:focus, .btn:visited:active, .btn:visited:focus {
+  .btn__room-box:active, .btn__room-box:focus, .btn__room-box:link:active, .btn__room-box:link:focus, .btn__room-box:visited:active, .btn__room-box:visited:focus {
     outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); }
 
-.btn--1 {
-  background-image: linear-gradient(to right bottom, rgba(187, 187, 187, 0.85), rgba(126, 124, 124, 0.85));
+.btn__room-box--1 {
+  background-image: linear-gradient(to right bottom, rgba(238, 238, 238, 0.85), rgba(119, 119, 119, 0.85));
   color: #fff; }
-  .btn--1::after {
-    background-image: linear-gradient(to right bottom, rgba(187, 187, 187, 0.85), rgba(126, 124, 124, 0.85)); }
+  .btn__room-box--1::after {
+    background-image: linear-gradient(to right bottom, rgba(238, 238, 238, 0.85), rgba(119, 119, 119, 0.85)); }
 
-.btn--2 {
+.btn__room-box--2 {
   background-image: linear-gradient(to right bottom, rgba(0, 180, 201, 0.85), rgba(0, 112, 126, 0.85));
   color: #fff; }
-  .btn--2::after {
+  .btn__room-box--2::after {
     background-image: linear-gradient(to right bottom, rgba(0, 180, 201, 0.85), rgba(0, 112, 126, 0.85)); }
 
-.btn--3 {
+.btn__room-box--3 {
   background-image: linear-gradient(to right bottom, rgba(38, 178, 0, 0.85), rgba(24, 112, 0, 0.85));
   color: #fff; }
-  .btn--3::after {
+  .btn__room-box--3::after {
     background-image: linear-gradient(to right bottom, rgba(38, 178, 0, 0.85), rgba(24, 112, 0, 0.85)); }
 
-.btn--4 {
+.btn__room-box--4 {
   background-image: linear-gradient(to right bottom, rgba(197, 0, 0, 0.85), rgba(135, 0, 0, 0.85));
   color: #fff; }
-  .btn--4::after {
+  .btn__room-box--4::after {
     background-image: linear-gradient(to right bottom, rgba(197, 0, 0, 0.85), rgba(135, 0, 0, 0.85)); }
 
-.btn::after {
+.btn__room-box::after {
   content: "";
   display: inline-block;
   height: 100%;
@@ -496,12 +392,12 @@ body {
   z-index: -1;
   transition: all .4s; }
 
-.btn-events {
+.btn__events {
   position: relative;
   margin: 0 auto;
   width: 100vh;
   height: 50vh; }
-  .btn-events--btn {
+  .btn__events--btn {
     z-index: 1;
     position: relative;
     margin: 0 auto;
@@ -510,15 +406,15 @@ body {
     border-radius: 5rem;
     top: 65%; }
     @media only screen and (max-width: 56.25em) {
-      .btn-events--btn {
+      .btn__events--btn {
         top: 65%;
         left: -8%; } }
     @media only screen and (max-width: 37.5em) {
-      .btn-events--btn {
+      .btn__events--btn {
         top: 50%;
         left: -36%; } }
-    .btn-events--btn-link, .btn-events--btn-link:link, .btn-events--btn-link:visited {
-      background-color: #df3131;
+    .btn__events--btn-link, .btn__events--btn-link:link, .btn__events--btn-link:visited {
+      background-color: #C50000;
       clip-path: circle(30%);
       border-radius: 5rem;
       width: 100%;
@@ -531,18 +427,48 @@ body {
       border: none;
       cursor: pointer;
       outline: none; }
-    .btn-events--btn-link:hover, .btn-events--btn-link:active, .btn-events--btn-link:focus {
+    .btn__events--btn-link:hover, .btn__events--btn-link:active, .btn__events--btn-link:focus {
       transform: translate(-28%, -15%);
-      background-color: rgba(189, 255, 102, 0.521); }
+      background-color: #eee; }
 
-.mainheader-registro {
+.btn__tournaments {
+  width: fit-content;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  font-weight: 900;
+  background: linear-gradient(to left, #b030b0, #602080);
+  color: white; }
+  .btn__tournaments:hover {
+    transform: translate(-50%, -2px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; }
+  @media only screen and (max-width: 75em) {
+    .btn__tournaments {
+      font-size: 3.5rem;
+      padding: 1rem 3rem;
+      opacity: 90%;
+      margin-top: 2rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .btn__tournaments {
+      font-size: 3rem;
+      margin-top: 0; } }
+
+.mainheader-booking {
   position: absolute;
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60rem;
+  width: 70rem;
   text-align: center; }
-  .mainheader-registro__date {
+  .mainheader-booking__date {
     display: inline-block;
     font-size: 2rem;
     border: none;
@@ -555,14 +481,14 @@ body {
     color: #fff;
     transition: 250ms width ease, 250ms border-color ease;
     cursor: pointer;
-    animation-name: moverAbajo;
+    animation-name: moveDown;
     animation-duration: 2s; }
-    .mainheader-registro__date:hover {
+    .mainheader-booking__date:hover {
       width: 21rem; }
-    .mainheader-registro__date:focus {
+    .mainheader-booking__date:focus {
       width: 23rem;
-      border-color: #b801b8; }
-  .mainheader-registro input[type="date"]::-webkit-calendar-picker-indicator {
+      border-color: #b030b0; }
+  .mainheader-booking input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1); }
 
 .parallax {
@@ -570,9 +496,15 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(/img/background.jpg);
+  background-image: url(/img/background-big.jpg);
   height: 100vh;
   width: 100%; }
+  @media only screen and (max-width: 75em) {
+    .parallax {
+      background-image: url(/img/background.jpg); } }
+  @media only screen and (max-width: 56.25em) {
+    .parallax {
+      background-image: url(/img/background-small.jpg); } }
   .parallax__section {
     opacity: 0.75; }
   .parallax__header {
@@ -671,16 +603,7 @@ body {
   .popup__events {
     transition: all 1s;
     position: relative;
-    margin: 0 auto;
-    /*@include respond(tab-land) {
-            transform: translateY(-20%, 20%);
-        }
-        @include respond(tab-port) {
-            transform: translate(-43%, 20%);
-        }
-        @include respond(phone) {
-            transform: translate(-40%, 50%);
-        }*/ }
+    margin: 0 auto; }
     .popup__events--gaming {
       margin-bottom: -1.5rem;
       width: 100%;
@@ -737,7 +660,7 @@ body {
     .room-box {
       height: auto; } }
   .room-box--1:hover {
-    box-shadow: 0 2.5rem 4rem rgba(126, 124, 124, 0.5); }
+    box-shadow: 0 2.5rem 4rem rgba(119, 119, 119, 0.5); }
   .room-box--2:hover {
     box-shadow: 0 2.5rem 4rem rgba(0, 112, 126, 0.5); }
   .room-box--3:hover {
@@ -752,7 +675,7 @@ body {
     border-top-left-radius: 3px;
     border-bottom-right-radius: 3px; }
     .room-box__picture--1 {
-      background-image: linear-gradient(to right bottom, #BBBBBB, #7E7C7C), url(../../img/whr.jpg); }
+      background-image: linear-gradient(to right bottom, #eee, #777), url(../../img/whr.jpg); }
     .room-box__picture--2 {
       background-image: linear-gradient(to right bottom, #00B4C9, #00707E), url(../../img/blr2.jpg); }
     .room-box__picture--3 {
@@ -774,7 +697,7 @@ body {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .room-box__heading-span--1 {
-      background-image: linear-gradient(to right bottom, rgba(187, 187, 187, 0.85), rgba(126, 124, 124, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(238, 238, 238, 0.85), rgba(119, 119, 119, 0.85)); }
     .room-box__heading-span--2 {
       background-image: linear-gradient(to right bottom, rgba(0, 180, 201, 0.85), rgba(0, 112, 126, 0.85)); }
     .room-box__heading-span--3 {
@@ -881,36 +804,6 @@ body {
       @media only screen and (max-width: 75em) {
         .tournament-ad__info--text {
           letter-spacing: 0.2rem; } }
-    .tournament-ad__info--button {
-      width: fit-content;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      border-radius: 2rem;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, 0);
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 0.2rem;
-      font-weight: 900;
-      background: linear-gradient(to left, #b030b0, #602080);
-      color: white; }
-      .tournament-ad__info--button:hover {
-        transform: translate(-50%, -2px);
-        background: linear-gradient(to left, #b030b0, #602080);
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; }
-      @media only screen and (max-width: 75em) {
-        .tournament-ad__info--button {
-          font-size: 3.5rem;
-          padding: 1rem 3rem;
-          opacity: 90%;
-          margin-top: 2rem; } }
-      @media only screen and (max-width: 56.25em) {
-        .tournament-ad__info--button {
-          font-size: 3rem;
-          margin-top: 0; } }
   .tournament-ad__info hr {
     width: 50%;
     margin: 0 auto; }
@@ -943,7 +836,7 @@ body {
   display: none; }
 
 .burger__button {
-  color: #b801b8;
+  color: #b030b0;
   background-color: transparent;
   height: 7rem;
   width: 7rem;
@@ -964,7 +857,7 @@ body {
   z-index: 1500;
   transition: all 0.8s; }
 
-.burger__oscurecer {
+.burger__darken {
   height: 100%;
   width: 0;
   position: fixed;
@@ -995,7 +888,6 @@ body {
   margin: 1rem; }
 
 .burger__link {
-  /**/
   font-size: 2rem;
   color: #fff;
   text-decoration: none; }
@@ -1008,7 +900,7 @@ body {
   width: 25rem;
   right: 0; }
 
-.burger__checkbox:checked ~ .burger__oscurecer {
+.burger__checkbox:checked ~ .burger__darken {
   width: 100%;
   opacity: 1; }
 
@@ -1018,7 +910,7 @@ body {
   .burger__icon, .burger__icon::before, .burger__icon::after {
     width: 3rem;
     height: 2px;
-    background-color: #b801b8;
+    background-color: #b030b0;
     display: inline-block; }
   .burger__icon::before, .burger__icon::after {
     content: "";
@@ -1049,22 +941,22 @@ body {
   transform: rotate(-135deg);
   background-color: #fff; }
 
-.oscurecer {
+.darken {
   width: 100%;
   height: 100vh;
   transition: all 0.5s; }
 
-.navegacion:hover ~ .oscurecer {
+.navegation:hover ~ .darken {
   width: 100%;
   height: 100vh;
   background-color: #0000004d; }
 
-.mainheader-titulocaja:hover ~ .oscurecer {
+.mainheader-titlebox:hover ~ .darken {
   width: 100%;
   height: 100vh;
   background-color: #0000004d; }
 
-.mainheader-registro:hover ~ .oscurecer {
+.mainheader-booking:hover ~ .darken {
   width: 100%;
   height: 100vh;
   background-color: #0000004d; }
@@ -1181,22 +1073,22 @@ body {
       .row [class^="col-"] {
         width: 100% !important; } }
 
-.navegacion {
+.navegation {
   position: absolute;
   width: 100%;
   height: 8rem;
-  animation-name: moverAbajo;
+  animation-name: moveDown;
   animation-duration: 2s; }
-  @media (max-width: 56.25em) {
-    .navegacion {
+  @media only screen and (max-width: 56.25em) {
+    .navegation {
       display: none; } }
-  .navegacion-logo {
+  .navegation-logo {
     height: 7rem;
     margin-top: 4rem;
     margin-left: 6rem;
     margin-right: 5rem;
     float: left; }
-  .navegacion-menu {
+  .navegation-menu {
     float: left;
     font-size: 25px;
     font-weight: bold;
@@ -1205,9 +1097,9 @@ body {
     margin-left: 4rem;
     margin-top: 4rem;
     list-style: none; }
-  .navegacion-menu:hover {
+  .navegation-menu:hover {
     cursor: pointer; }
-  .navegacion-menu a {
+  .navegation-menu a {
     color: #fff;
     text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);
@@ -1215,9 +1107,48 @@ body {
     background-repeat: no-repeat;
     background-size: 0% 2px;
     transition: background-size 1s; }
-  .navegacion-menu a:hover {
+  .navegation-menu a:hover {
     background-size: 100% 2px;
-    color: #b801b8; }
+    color: #b030b0; }
+
+.mainheader {
+  height: 100vh;
+  background-image: url("../img/portada.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  .mainheader:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000066; }
+  .mainheader-titlebox {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40.8rem;
+    text-align: center; }
+  .mainheader-title {
+    color: #fff;
+    text-transform: capitalize;
+    animation-name: moveDown;
+    animation-duration: 2s;
+    transition: transform 0.5s; }
+    .mainheader-title__main {
+      display: block;
+      font-size: 6rem;
+      font-weight: 700; }
+    .mainheader-title__secondary {
+      display: block;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.4rem; }
+    .mainheader-title:hover {
+      transform: scale(1.1); }
 
 .section-rooms {
   background-color: #eee;
@@ -1240,7 +1171,7 @@ body {
     margin: 0 auto;
     width: 100vh;
     height: 50vh;
-    background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.7), rgba(7, 163, 190, 0.7)), url("../img/levelup.jpg");
+    background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.7), rgba(0, 180, 201, 0.7)), url("../img/levelup.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     transition: all .2s;
@@ -1256,7 +1187,7 @@ body {
         transform: translateX(-25%); } }
     .section-events--hover:hover {
       animation: closingRectangle 3s ease-in-out; }
-      .section-events--hover:hover .btn-events {
+      .section-events--hover:hover .btn__events {
         opacity: 0; }
 
 .section-tournaments {

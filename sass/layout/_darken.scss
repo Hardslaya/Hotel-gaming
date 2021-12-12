@@ -1,21 +1,21 @@
-.oscurecer{
+.darken{
     width: 100%;
     height: 100vh;
     transition: all 0.5s;
 }
 
-.navegacion:hover ~ .oscurecer{
+.navegation:hover ~ .darken{
     width: 100%;
     height: 100vh;
-    background-color: $color-negroA2;
+    background-color: $color-black-3;
 }
-.mainheader-titulocaja:hover ~ .oscurecer{
+.mainheader-titlebox:hover ~ .darken{
     width: 100%;
     height: 100vh;
-    background-color: $color-negroA2;
+    background-color: $color-black-3;
 }
-.mainheader-registro:hover ~ .oscurecer{
+.mainheader-booking:hover ~ .darken{
     width: 100%;
     height: 100vh;
-    background-color: $color-negroA2;
+    background-color: $color-black-3;
 }

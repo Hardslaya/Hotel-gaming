@@ -1,47 +1,27 @@
-//header color
-$color-blanco: #fff;
-
-$color-rosa: #b801b8;
-$color-rosaA: #b801b880;
-
-$color-morado: rgb(59, 0, 59);
-
-$color-negro: #000000;
-$color-negroA1: #00000066;
-$color-negroA2:#0000004d;
-
-
-//Main Colours
+//Colours
+$color-purple-dark-2: rgb(59, 0, 59);
 $color-purple-dark: #602080;
 $color-purple-light: #b030b0;
+$color-pink-light: rgb(223, 37, 198);
 
 $color-yellow: #f6fa00;
+
+$color-red-light: #C50000;
 $color-red: red;
+$color-red-dark: #870000;
+
+$color-blue-light: #00B4C9;
+$color-blue-dark: #00707E;
+
+$color-green-light: #26B200;
+$color-green-dark: #187000;
 
 $color-grey-light: #eee;
 $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: #000;
-
-//Room-box Colours
-$color-1-light: #BBBBBB;
-$color-1-dark: #7E7C7C;
-
-$color-2-light: #00B4C9;
-$color-2-dark: #00707E;
-
-$color-3-light: #26B200;
-$color-3-dark: #187000;
-
-$color-4-light: #C50000;
-$color-4-dark: #870000;
-
-//Events Colours
-$upgrade-pink: rgb(223, 37, 198);
-
-$events-blue: rgb(7, 163, 190);
-$events-btn-checked: rgba(189, 255, 102, 0.521);
-$events-btn-notChecked: rgb(223, 49, 49);
+$color-black-2: #00000066;
+$color-black-3:#0000004d;
 
 //Font
 $default-font-size: 1.6rem;

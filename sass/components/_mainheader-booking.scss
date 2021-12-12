@@ -1,25 +1,25 @@
-.mainheader-registro{
+.mainheader-booking{
     position: absolute;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60rem;
+    width: 70rem;
     text-align: center;
 
     &__date{
         display: inline-block;
         font-size: 2rem;
         border: none;
-        border-bottom: 0.1rem solid $color-blanco;
+        border-bottom: 0.1rem solid $color-white;
         background: none;
         margin-right: 2rem;
         padding: 0.5rem;
         width: 19rem;
         outline: none;
-        color: $color-blanco;
+        color: $color-white;
         transition: 250ms width ease, 250ms border-color ease; //cambios que no sean bruscos, suavizar cambio de tamaño
         cursor: pointer;
-        animation-name: moverAbajo;
+        animation-name: moveDown;
         animation-duration: 2s;
 
         &:hover{
@@ -27,7 +27,7 @@
         }
         &:focus{
             width: 23rem;
-            border-color: $color-rosa;
+            border-color: $color-purple-light;
         }
     }
     input[type="date"]::-webkit-calendar-picker-indicator{
