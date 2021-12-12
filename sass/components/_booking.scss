@@ -39,7 +39,6 @@
     &__form {
         width: 60%;
         height: inherit;
-        background-color: transparent;
         position: relative;
         float: right;
         color: white;
@@ -136,8 +135,6 @@
                     background-position-y: center;
                     background-size: cover;
                     display: inline-block;
-                    left: 0;
-                    top: -0.4rem;
     
                     &::after {
                         content: "";

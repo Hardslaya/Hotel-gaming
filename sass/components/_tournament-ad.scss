@@ -1,7 +1,5 @@
 .tournament-ad{
     margin-top: 40%;
-    margin-bottom: 20%;
-    height: 60%;
     border-radius: 5px;
     overflow: hidden; 
     z-index: 0;
@@ -16,7 +14,6 @@
     &__image{
         height: 35rem;
         border-radius: 5px;
-        overflow: hidden;
         z-index: -10;
 
         @include respond(tab-land) {
@@ -70,11 +67,10 @@
         }
 
         &--heading{
-            margin: 0 0 auto auto;
             padding: 1rem;
             width: fit-content;
             letter-spacing: 0.1rem;
-            min-width: 90%;
+            min-width: 100%;
             text-transform: uppercase;
             text-align: center;
             font-size: 1.9rem;
