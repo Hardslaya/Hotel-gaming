@@ -173,6 +173,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .booking {
       padding-top: 6rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .booking {
+      height: 95rem; } }
   .booking__image {
     height: 60rem;
     width: 40%;
@@ -301,10 +304,10 @@ body {
           padding-left: 40%;
           position: absolute;
           width: fit-content;
-          left: 50%;
-          transform: translate(-50%, 0);
+          left: 45%;
           padding: 1rem 1.5rem;
-          font-size: 3rem; } }
+          font-size: 3rem;
+          margin-top: 3rem; } }
       @media only screen and (max-width: 56.25em) {
         .booking__form__input--submit {
           right: 50%; } }
