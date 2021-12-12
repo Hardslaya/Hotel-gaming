@@ -407,15 +407,22 @@ body {
     width: 10%;
     height: 20%;
     border-radius: 5rem;
-    top: 65%; }
+    top: 65%;
+    left: -35%; }
+    @media only screen and (min-width: 112.5em) {
+      .btn__events--btn {
+        left: -24%; } }
+    @media only screen and (max-width: 75em) {
+      .btn__events--btn {
+        left: -22%; } }
     @media only screen and (max-width: 56.25em) {
       .btn__events--btn {
         top: 65%;
-        left: -8%; } }
+        left: -17%; } }
     @media only screen and (max-width: 37.5em) {
       .btn__events--btn {
-        top: 50%;
-        left: -36%; } }
+        top: 47%;
+        left: -34%; } }
     .btn__events--btn-link, .btn__events--btn-link:link, .btn__events--btn-link:visited {
       background-color: #C50000;
       clip-path: circle(30%);
@@ -432,7 +439,7 @@ body {
       outline: none; }
     .btn__events--btn-link:hover, .btn__events--btn-link:active, .btn__events--btn-link:focus {
       transform: translate(-28%, -15%);
-      background-color: #eee; }
+      background-color: #26B200; }
 
 .btn__tournaments {
   width: fit-content;
@@ -1163,12 +1170,13 @@ body {
 .section-events {
   position: relative;
   margin: 0 auto;
-  width: fit-content;
+  width: auto;
   height: fit-content;
   padding: 10rem;
   text-align: center;
   transition: all .2s;
-  border-radius: 5rem; }
+  border-radius: 5rem;
+  transform: translateX(15%); }
   .section-events--hover {
     position: absolute;
     margin: 0 auto;
@@ -1180,14 +1188,20 @@ body {
     transition: all .2s;
     border-radius: 5rem;
     z-index: 1; }
+    @media only screen and (min-width: 112.5em) {
+      .section-events--hover {
+        transform: translateX(-5%); } }
+    @media only screen and (max-width: 75em) {
+      .section-events--hover {
+        transform: translateX(0%); } }
     @media only screen and (max-width: 56.25em) {
       .section-events--hover {
-        transform: translateX(-11%); } }
+        transform: translateX(-10%); } }
     @media only screen and (max-width: 37.5em) {
       .section-events--hover {
         width: 40%;
         height: 50%;
-        transform: translateX(-25%); } }
+        transform: translateX(-20%); } }
     .section-events--hover:hover {
       animation: closingRectangle 3s ease-in-out; }
       .section-events--hover:hover .btn__events {
