@@ -904,11 +904,17 @@ body {
 
 .burger__checkbox:checked ~ .burger__background {
   right: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .burger__checkbox:checked ~ .burger__background {
+      width: 100%; } }
 
 .burger__checkbox:checked ~ .burger__nav {
   opacity: 1;
   width: 25rem;
   right: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .burger__checkbox:checked ~ .burger__nav {
+      width: 45rem; } }
 
 .burger__checkbox:checked ~ .burger__darken {
   width: 100%;
