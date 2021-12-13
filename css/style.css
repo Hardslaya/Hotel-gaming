@@ -1175,7 +1175,7 @@ body {
   text-align: center;
   transition: all .2s;
   border-radius: 5rem;
-  transform: translateX(20%); }
+  transform: translateX(15%); }
   .section-events--hover {
     position: absolute;
     margin: 0 auto;
@@ -1192,10 +1192,10 @@ body {
         transform: translateX(-5%); } }
     @media only screen and (max-width: 75em) {
       .section-events--hover {
-        transform: translateX(-20%); } }
+        transform: translateX(0%); } }
     @media only screen and (max-width: 56.25em) {
       .section-events--hover {
-        transform: translateX(-30%); } }
+        transform: translateX(-10%); } }
     @media only screen and (max-width: 37.5em) {
       .section-events--hover {
         width: 40%;
@@ -1203,6 +1203,8 @@ body {
         transform: translateX(-20%); } }
     .section-events--hover:hover {
       animation: closingRectangle 3s ease-in-out; }
+      .section-events--hover:hover .btn__events {
+        opacity: 0; }
 
 .section-tournaments {
   font-family: Lato;
