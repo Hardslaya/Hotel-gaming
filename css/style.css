@@ -191,7 +191,6 @@ body {
   .booking__form {
     width: 60%;
     height: inherit;
-    background-color: transparent;
     position: relative;
     float: right;
     color: white;
@@ -270,9 +269,7 @@ body {
           background-image: url(../../img/check.png);
           background-position-y: center;
           background-size: cover;
-          display: inline-block;
-          left: 0;
-          top: -0.4rem; }
+          display: inline-block; }
           .booking__form-group--radio-check::after {
             content: "";
             background-position-y: center;
@@ -407,18 +404,18 @@ body {
     width: 10%;
     height: 20%;
     border-radius: 5rem;
-    top: 65%;
-    left: -35%; }
+    top: 70%;
+    left: -25%; }
     @media only screen and (min-width: 112.5em) {
       .btn__events--btn {
-        left: -24%; } }
+        left: -38%; } }
     @media only screen and (max-width: 75em) {
       .btn__events--btn {
         left: -22%; } }
     @media only screen and (max-width: 56.25em) {
       .btn__events--btn {
         top: 65%;
-        left: -17%; } }
+        left: -35%; } }
     @media only screen and (max-width: 37.5em) {
       .btn__events--btn {
         top: 47%;
@@ -732,8 +729,6 @@ body {
 
 .tournament-ad {
   margin-top: 40%;
-  margin-bottom: 20%;
-  height: 60%;
   border-radius: 5px;
   overflow: hidden;
   z-index: 0;
@@ -746,7 +741,6 @@ body {
   .tournament-ad__image {
     height: 35rem;
     border-radius: 5px;
-    overflow: hidden;
     z-index: -10; }
     @media only screen and (max-width: 75em) {
       .tournament-ad__image {
@@ -786,11 +780,10 @@ body {
         font-size: medium;
         z-index: 50; } }
     .tournament-ad__info--heading {
-      margin: 0 0 auto auto;
       padding: 1rem;
       width: fit-content;
       letter-spacing: 0.1rem;
-      min-width: 90%;
+      min-width: 100%;
       text-transform: uppercase;
       text-align: center;
       font-size: 1.9rem;
@@ -1182,7 +1175,7 @@ body {
   text-align: center;
   transition: all .2s;
   border-radius: 5rem;
-  transform: translateX(15%); }
+  transform: translateX(20%); }
   .section-events--hover {
     position: absolute;
     margin: 0 auto;
@@ -1199,10 +1192,10 @@ body {
         transform: translateX(-5%); } }
     @media only screen and (max-width: 75em) {
       .section-events--hover {
-        transform: translateX(0%); } }
+        transform: translateX(-20%); } }
     @media only screen and (max-width: 56.25em) {
       .section-events--hover {
-        transform: translateX(-10%); } }
+        transform: translateX(-30%); } }
     @media only screen and (max-width: 37.5em) {
       .section-events--hover {
         width: 40%;
@@ -1210,8 +1203,6 @@ body {
         transform: translateX(-20%); } }
     .section-events--hover:hover {
       animation: closingRectangle 3s ease-in-out; }
-      .section-events--hover:hover .btn__events {
-        opacity: 0; }
 
 .section-tournaments {
   font-family: Lato;
